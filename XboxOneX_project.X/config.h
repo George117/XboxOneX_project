@@ -3,8 +3,8 @@
 
 //butoane
 #define SST PORTAbits.RA0
-#define PLUS PORTAbits.RA1
-#define MINUS PORTAbits.RA2
+#define PLUS PORTAbits.RA2
+#define MINUS PORTAbits.RA1
 
 #define PUSHED      1
 #define NOT_PUSHED  0
