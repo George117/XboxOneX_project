@@ -7,7 +7,15 @@
 
 
 #include <xc.h>
+#include "bit_settings.h"
+#include "config.h"
+#include "i2c_display.h"
 
 void main(void) {
-    return;
+    config(); 
+    
+    while(1){
+
+    }
+    
 }

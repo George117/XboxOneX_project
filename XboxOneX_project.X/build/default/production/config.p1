@@ -1,18 +1,91 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"3 ./config.h
-[; ;./config.h: 3: void config(void);
-[v _config `(v ~T0 @X0 0 ef ]
-"50 ./i2c_display.h
+"1618 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1618:     struct {
+[s S90 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S90 . SCS0 SCS1 . IRCF0 IRCF1 IRCF2 IRCF3 SPLLEN ]
+"1628
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1628:     struct {
+[s S91 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S91 . SCS . IRCF ]
+"1617
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1617: typedef union {
+[u S89 `S90 1 `S91 1 ]
+[n S89 . . . ]
+"1634
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1634: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x099)));
+[v _OSCCONbits `VS89 ~T0 @X0 0 e@153 ]
+"357
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 357:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"367
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 367:     struct {
+[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S32 . . T0IF . T0IE ]
+"356
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 356: typedef union {
+[u S30 `S31 1 `S32 1 ]
+[n S30 . . . ]
+"374
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"2735
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2735: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
+"2782
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2782: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
+[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
+"1108
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1108: extern volatile unsigned char TRISA __attribute__((address(0x08C)));
+[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
+"1158
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1158: extern volatile unsigned char TRISC __attribute__((address(0x08E)));
+[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
+"429
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 429: extern volatile unsigned char PORTA __attribute__((address(0x00C)));
+[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
+"479
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 479: extern volatile unsigned char PORTC __attribute__((address(0x00E)));
+[v _PORTC `Vuc ~T0 @X0 0 e@14 ]
+"1945
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1945: extern volatile unsigned char LATA __attribute__((address(0x10C)));
+[v _LATA `Vuc ~T0 @X0 0 e@268 ]
+"1990
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1990: extern volatile unsigned char LATC __attribute__((address(0x10E)));
+[v _LATC `Vuc ~T0 @X0 0 e@270 ]
+"1164
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1164:     struct {
+[s S71 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S71 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 ]
+"1163
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1163: typedef union {
+[u S70 `S71 1 ]
+[n S70 . . ]
+"1173
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1173: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x08E)));
+[v _TRISCbits `VS70 ~T0 @X0 0 e@142 ]
+"36 ./i2c_display.h
+[; ;./i2c_display.h: 36: void I2C_Master_Init(const unsigned long c);
+[v _I2C_Master_Init `(v ~T0 @X0 0 ef1`Cul ]
+[v F2300 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF2300 ~T0 @X0 0 e ]
+[p i __delay ]
+"51 ./i2c_display.h
+[; ;./i2c_display.h: 51: void Lcd_Init();
+[v _Lcd_Init `(v ~T0 @X0 0 e? ]
+"49
+[; ;./i2c_display.h: 49: void Lcd_Clear();
+[v _Lcd_Clear `(v ~T0 @X0 0 e? ]
+"57
+[; ;./i2c_display.h: 57: void Cursor_Off();
+[v _Cursor_Off `(v ~T0 @X0 0 e? ]
+"50
 [; ;./i2c_display.h: 50: void Lcd_Set_Cursor(char a, char b);
 [v _Lcd_Set_Cursor `(v ~T0 @X0 0 ef2`uc`uc ]
 "53
 [; ;./i2c_display.h: 53: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
-[v F2300 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF2300 ~T0 @X0 0 e ]
-[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -481,37 +554,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BORV = LO ]
 "28
 [p x LVP = ON ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"14 main.c
-[; ;main.c: 14: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"13 config.c
+[; ;config.c: 13: void config()
+[v _config `(v ~T0 @X0 1 ef ]
+"14
+[; ;config.c: 14: {
 {
-[e :U _main ]
+[e :U _config ]
 [f ]
 "15
-[; ;main.c: 15:     config();
-[e ( _config ..  ]
+[; ;config.c: 15:     OSCCONbits.IRCF0=0;
+[e = . . _OSCCONbits 0 3 -> -> 0 `i `uc ]
+"16
+[; ;config.c: 16:     OSCCONbits.IRCF1=1;
+[e = . . _OSCCONbits 0 4 -> -> 1 `i `uc ]
 "17
-[; ;main.c: 17:     while(1){
-[e :U 330 ]
-{
+[; ;config.c: 17:     OSCCONbits.IRCF2=1;
+[e = . . _OSCCONbits 0 5 -> -> 1 `i `uc ]
 "18
-[; ;main.c: 18:     Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"19
-[; ;main.c: 19:     Lcd_Write_String("Test");
-[e ( _Lcd_Write_String (1 :s 1C ]
+[; ;config.c: 18:     OSCCONbits.IRCF3=1;
+[e = . . _OSCCONbits 0 6 -> -> 1 `i `uc ]
 "20
-[; ;main.c: 20:     _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;config.c: 20:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
 "21
-[; ;main.c: 21:     }
-}
-[e :U 329 ]
-[e $U 330  ]
-[e :U 331 ]
-"23
-[; ;main.c: 23: }
+[; ;config.c: 21:     INTCONbits.INTE = 0;
+[e = . . _INTCONbits 0 4 -> -> 0 `i `uc ]
+"22
+[; ;config.c: 22:     INTCONbits.PEIE = 0;
+[e = . . _INTCONbits 0 6 -> -> 0 `i `uc ]
+"24
+[; ;config.c: 24:     ANSELA=0X00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"25
+[; ;config.c: 25:     ANSELC=0X00;
+[e = _ANSELC -> -> 0 `i `uc ]
+"26
+[; ;config.c: 26:     TRISA=0X00;
+[e = _TRISA -> -> 0 `i `uc ]
+"27
+[; ;config.c: 27:     TRISC=0X00;
+[e = _TRISC -> -> 0 `i `uc ]
+"28
+[; ;config.c: 28:     PORTA=0X00;
+[e = _PORTA -> -> 0 `i `uc ]
+"29
+[; ;config.c: 29:     PORTC=0X00;
+[e = _PORTC -> -> 0 `i `uc ]
+"30
+[; ;config.c: 30:     LATA=0X00;
+[e = _LATA -> -> 0 `i `uc ]
+"31
+[; ;config.c: 31:     LATC=0X00;
+[e = _LATC -> -> 0 `i `uc ]
+"33
+[; ;config.c: 33:     TRISCbits.TRISC0=1;
+[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
+"34
+[; ;config.c: 34:     TRISCbits.TRISC1=1;
+[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
+"35
+[; ;config.c: 35:     I2C_Master_Init(100000);
+[e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
+"36
+[; ;config.c: 36:     _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"37
+[; ;config.c: 37:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
+"38
+[; ;config.c: 38:     Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
+"39
+[; ;config.c: 39:     Cursor_Off();
+[e ( _Cursor_Off ..  ]
+"40
+[; ;config.c: 40:     Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"41
+[; ;config.c: 41:     Lcd_Write_String("Paul Iorga");
+[e ( _Lcd_Write_String (1 :s 1C ]
+"42
+[; ;config.c: 42:     _delay((unsigned long)((2000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"48
+[; ;config.c: 48: }
 [e :UE 328 ]
 }
-[a 1C 84 101 115 116 0 ]
+[a 1C 80 97 117 108 32 73 111 114 103 97 0 ]

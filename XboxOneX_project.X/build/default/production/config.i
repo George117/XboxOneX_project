@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "config.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
+# 1 "config.c" 2
 
 
 
@@ -4078,7 +4077,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
+# 8 "config.c" 2
 
 # 1 "./bit_settings.h" 1
 # 12 "./bit_settings.h"
@@ -4099,13 +4098,13 @@ extern __bank0 __bit __timeout;
 #pragma config STVREN = OFF
 #pragma config BORV = LO
 #pragma config LVP = ON
-# 10 "main.c" 2
+# 9 "config.c" 2
 
 # 1 "./config.h" 1
 
 
 void config(void);
-# 11 "main.c" 2
+# 10 "config.c" 2
 
 # 1 "./i2c_display.h" 1
 # 36 "./i2c_display.h"
@@ -4133,16 +4132,42 @@ void Cursor_On();
 void Cursor_Off();
 void Cursor_Left();
 void Cursor_Right();
-# 12 "main.c" 2
+# 11 "config.c" 2
 
 
-void main(void) {
-    config();
+void config()
+{
+    OSCCONbits.IRCF0=0;
+    OSCCONbits.IRCF1=1;
+    OSCCONbits.IRCF2=1;
+    OSCCONbits.IRCF3=1;
 
-    while(1){
-    Lcd_Set_Cursor(1,1);
-    Lcd_Write_String("Test");
+    INTCONbits.GIE = 0;
+    INTCONbits.INTE = 0;
+    INTCONbits.PEIE = 0;
+
+    ANSELA=0X00;
+    ANSELC=0X00;
+    TRISA=0X00;
+    TRISC=0X00;
+    PORTA=0X00;
+    PORTC=0X00;
+    LATA=0X00;
+    LATC=0X00;
+
+    TRISCbits.TRISC0=1;
+    TRISCbits.TRISC1=1;
+    I2C_Master_Init(100000);
     _delay((unsigned long)((100)*(8000000/4000.0)));
-    }
+    Lcd_Init();
+    Lcd_Clear();
+    Cursor_Off();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("Paul Iorga");
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
+
+
+
+
 
 }
