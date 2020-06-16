@@ -4085,7 +4085,7 @@ extern __bank0 __bit __timeout;
 #pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
@@ -4102,8 +4102,7 @@ extern __bank0 __bit __timeout;
 # 10 "main.c" 2
 
 # 1 "./config.h" 1
-
-
+# 15 "./config.h"
 void config(void);
 # 11 "main.c" 2
 
@@ -4140,9 +4139,7 @@ void main(void) {
     config();
 
     while(1){
-    Lcd_Set_Cursor(1,1);
-    Lcd_Write_String("Test");
-    _delay((unsigned long)((100)*(8000000/4000.0)));
+
     }
 
 }

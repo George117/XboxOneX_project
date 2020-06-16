@@ -1,18 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"3 ./config.h
-[; ;./config.h: 3: void config(void);
+"15 ./config.h
+[; ;./config.h: 15: void config(void);
 [v _config `(v ~T0 @X0 0 ef ]
-"50 ./i2c_display.h
-[; ;./i2c_display.h: 50: void Lcd_Set_Cursor(char a, char b);
-[v _Lcd_Set_Cursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"53
-[; ;./i2c_display.h: 53: void Lcd_Write_String(char *a);
-[v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
-[v F2300 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF2300 ~T0 @X0 0 e ]
-[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -458,7 +448,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [p x PWRTE = OFF ]
 "15
-[p x MCLRE = OFF ]
+[p x MCLRE = ON ]
 "16
 [p x CP = OFF ]
 "17
@@ -495,23 +485,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 17:     while(1){
 [e :U 330 ]
 {
-"18
-[; ;main.c: 18:     Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "19
-[; ;main.c: 19:     Lcd_Write_String("Test");
-[e ( _Lcd_Write_String (1 :s 1C ]
-"20
-[; ;main.c: 20:     _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"21
-[; ;main.c: 21:     }
+[; ;main.c: 19:     }
 }
 [e :U 329 ]
 [e $U 330  ]
 [e :U 331 ]
-"23
-[; ;main.c: 23: }
+"21
+[; ;main.c: 21: }
 [e :UE 328 ]
 }
-[a 1C 84 101 115 116 0 ]

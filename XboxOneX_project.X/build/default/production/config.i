@@ -4084,7 +4084,7 @@ extern __bank0 __bit __timeout;
 #pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
@@ -4101,8 +4101,7 @@ extern __bank0 __bit __timeout;
 # 9 "config.c" 2
 
 # 1 "./config.h" 1
-
-
+# 15 "./config.h"
 void config(void);
 # 10 "config.c" 2
 
@@ -4154,6 +4153,23 @@ void config()
     PORTC=0X00;
     LATA=0X00;
     LATC=0X00;
+
+
+    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
+    TRISAbits.TRISA2 = 1;
+
+
+    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC5 = 0;
+    TRISAbits.TRISA5 = 0;
+
+
+
+    TRISAbits.TRISA4 = 1;
+    TRISCbits.TRISC2 = 0;
+    TRISCbits.TRISC3 = 0;
+
 
     TRISCbits.TRISC0=1;
     TRISCbits.TRISC1=1;

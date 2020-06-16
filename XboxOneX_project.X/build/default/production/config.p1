@@ -53,6 +53,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1990
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1990: extern volatile unsigned char LATC __attribute__((address(0x10E)));
 [v _LATC `Vuc ~T0 @X0 0 e@270 ]
+"1114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1114:     struct {
+[s S69 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S69 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"1113
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1113: typedef union {
+[u S68 `S69 1 ]
+[n S68 . . ]
+"1123
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1123: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
+[v _TRISAbits `VS68 ~T0 @X0 0 e@140 ]
 "1164
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1164:     struct {
 [s S71 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -531,7 +542,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [p x PWRTE = OFF ]
 "15
-[p x MCLRE = OFF ]
+[p x MCLRE = ON ]
 "16
 [p x CP = OFF ]
 "17
@@ -607,38 +618,65 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [; ;config.c: 31:     LATC=0X00;
 [e = _LATC -> -> 0 `i `uc ]
-"33
-[; ;config.c: 33:     TRISCbits.TRISC0=1;
-[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
 "34
-[; ;config.c: 34:     TRISCbits.TRISC1=1;
-[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
+[; ;config.c: 34:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 "35
-[; ;config.c: 35:     I2C_Master_Init(100000);
-[e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
+[; ;config.c: 35:     TRISAbits.TRISA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
 "36
-[; ;config.c: 36:     _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"37
-[; ;config.c: 37:     Lcd_Init();
-[e ( _Lcd_Init ..  ]
-"38
-[; ;config.c: 38:     Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
+[; ;config.c: 36:     TRISAbits.TRISA2 = 1;
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
 "39
-[; ;config.c: 39:     Cursor_Off();
-[e ( _Cursor_Off ..  ]
+[; ;config.c: 39:     TRISCbits.TRISC4 = 0;
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
 "40
-[; ;config.c: 40:     Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;config.c: 40:     TRISCbits.TRISC5 = 0;
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
 "41
-[; ;config.c: 41:     Lcd_Write_String("Paul Iorga");
+[; ;config.c: 41:     TRISAbits.TRISA5 = 0;
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
+"45
+[; ;config.c: 45:     TRISAbits.TRISA4 = 1;
+[e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
+"46
+[; ;config.c: 46:     TRISCbits.TRISC2 = 0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"47
+[; ;config.c: 47:     TRISCbits.TRISC3 = 0;
+[e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
+"50
+[; ;config.c: 50:     TRISCbits.TRISC0=1;
+[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
+"51
+[; ;config.c: 51:     TRISCbits.TRISC1=1;
+[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
+"52
+[; ;config.c: 52:     I2C_Master_Init(100000);
+[e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
+"53
+[; ;config.c: 53:     _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"54
+[; ;config.c: 54:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
+"55
+[; ;config.c: 55:     Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
+"56
+[; ;config.c: 56:     Cursor_Off();
+[e ( _Cursor_Off ..  ]
+"57
+[; ;config.c: 57:     Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"58
+[; ;config.c: 58:     Lcd_Write_String("Paul Iorga");
 [e ( _Lcd_Write_String (1 :s 1C ]
-"42
-[; ;config.c: 42:     _delay((unsigned long)((2000)*(8000000/4000.0)));
+"59
+[; ;config.c: 59:     _delay((unsigned long)((2000)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"48
-[; ;config.c: 48: }
+"65
+[; ;config.c: 65: }
 [e :UE 328 ]
 }
 [a 1C 80 97 117 108 32 73 111 114 103 97 0 ]
