@@ -1,8 +1,46 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"15 ./config.h
-[; ;./config.h: 15: void config(void);
+"18 ./config.h
+[; ;./config.h: 18: void config(void);
 [v _config `(v ~T0 @X0 0 ef ]
+"19
+[; ;./config.h: 19: void pwm_config(void);
+[v _pwm_config `(v ~T0 @X0 0 ef ]
+"4489 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 4489: extern volatile unsigned char CCPR2L __attribute__((address(0x298)));
+[v _CCPR2L `Vuc ~T0 @X0 0 e@664 ]
+"1996
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1996:     struct {
+[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S108 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 ]
+"1995
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1995: typedef union {
+[u S107 `S108 1 ]
+[n S107 . . ]
+"2005
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2005: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
+[v _LATCbits `VS107 ~T0 @X0 0 e@270 ]
+"435
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 435:     struct {
+[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S34 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"434
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 434: typedef union {
+[u S33 `S34 1 ]
+[n S33 . . ]
+"444
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
+"50 ./i2c_display.h
+[; ;./i2c_display.h: 50: void Lcd_Set_Cursor(char a, char b);
+[v _Lcd_Set_Cursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"53
+[; ;./i2c_display.h: 53: void Lcd_Write_String(char *a);
+[v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
+[v F2300 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF2300 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -481,17 +519,104 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15
 [; ;main.c: 15:     config();
 [e ( _config ..  ]
-"17
-[; ;main.c: 17:     while(1){
+"16
+[; ;main.c: 16:     pwm_config();
+[e ( _pwm_config ..  ]
+"18
+[; ;main.c: 18:     CCPR2L = 0;
+[e = _CCPR2L -> -> 0 `i `uc ]
+"19
+[; ;main.c: 19:     LATCbits.LATC4 = 0;
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+"20
+[; ;main.c: 20:     LATCbits.LATC5 = 1;
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+"22
+[; ;main.c: 22:     while(1){
 [e :U 330 ]
 {
-"19
-[; ;main.c: 19:     }
+"23
+[; ;main.c: 23:         if(PORTAbits.RA0 == 1){
+[e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 332  ]
+{
+"24
+[; ;main.c: 24:             Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"25
+[; ;main.c: 25:             Lcd_Write_String("SST == PUSHED");
+[e ( _Lcd_Write_String (1 :s 1C ]
+"26
+[; ;main.c: 26:             CCPR2L = 0;
+[e = _CCPR2L -> -> 0 `i `uc ]
+"28
+[; ;main.c: 28:         }
+}
+[e $U 333  ]
+"29
+[; ;main.c: 29:         else if(PORTAbits.RA2 == 1){
+[e :U 332 ]
+[e $ ! == -> . . _PORTAbits 0 2 `i -> 1 `i 334  ]
+{
+"30
+[; ;main.c: 30:             Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"31
+[; ;main.c: 31:             Lcd_Write_String("MINUS == PUSHED");
+[e ( _Lcd_Write_String (1 :s 2C ]
+"32
+[; ;main.c: 32:             CCPR2L--;
+[e -- _CCPR2L -> -> 1 `i `Vuc ]
+"33
+[; ;main.c: 33:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"37
+[; ;main.c: 37:         }
+}
+[e $U 335  ]
+"38
+[; ;main.c: 38:         else if(PORTAbits.RA1 == 1){
+[e :U 334 ]
+[e $ ! == -> . . _PORTAbits 0 1 `i -> 1 `i 336  ]
+{
+"39
+[; ;main.c: 39:             Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"40
+[; ;main.c: 40:             Lcd_Write_String("PLUS == PUSHED");
+[e ( _Lcd_Write_String (1 :s 3C ]
+"42
+[; ;main.c: 42:             CCPR2L++;
+[e ++ _CCPR2L -> -> 1 `i `Vuc ]
+"43
+[; ;main.c: 43:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"47
+[; ;main.c: 47:         }
+}
+[e $U 337  ]
+"48
+[; ;main.c: 48:         else{
+[e :U 336 ]
+{
+"49
+[; ;main.c: 49:             _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"50
+[; ;main.c: 50:         }
+}
+[e :U 337 ]
+[e :U 335 ]
+[e :U 333 ]
+"52
+[; ;main.c: 52:     }
 }
 [e :U 329 ]
 [e $U 330  ]
 [e :U 331 ]
-"21
-[; ;main.c: 21: }
+"54
+[; ;main.c: 54: }
 [e :UE 328 ]
 }
+[a 1C 83 83 84 32 61 61 32 80 85 83 72 69 68 0 ]
+[a 2C 77 73 78 85 83 32 61 61 32 80 85 83 72 69 68 0 ]
+[a 3C 80 76 85 83 32 61 61 32 80 85 83 72 69 68 0 ]

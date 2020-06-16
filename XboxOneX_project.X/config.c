@@ -38,13 +38,13 @@ void config()
     // l298
     TRISCbits.TRISC4 = 0; // IN1
     TRISCbits.TRISC5 = 0; // IN2
-    TRISAbits.TRISA5 = 0; // ENA
+    
     
     
     //Feedback
     TRISAbits.TRISA4 = 1; // TEMP_SENSE
-    TRISCbits.TRISC2 = 0; // U_SENSE
-    TRISCbits.TRISC3 = 0; // I_SENSE
+    TRISCbits.TRISC2 = 1; // U_SENSE
+    TRISCbits.TRISC3 = 1; // I_SENSE
     
     //Display
     TRISCbits.TRISC0=1;//i2c
@@ -65,3 +65,16 @@ void config()
 }
 
 
+void pwm_config(void)
+{  
+    TRISAbits.TRISA5 = 1; // ENA
+    PIR1bits.TMR2IF = 0;
+    APFCON1bits.CCP2SEL = 1;
+    CCP2CON=0b00001100; 
+    CCPTMRS = 0b00000000;
+    CCP2AS=0b00000000; 
+    PR2=0x65; 
+    CCPR2L=0;  
+    T2CON=0b00000100; 
+    TRISAbits.TRISA5 = 0; 
+}

@@ -97,6 +97,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;./i2c_display.h: 53: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
+"535 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 535:     struct {
+[s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . TMR1IF TMR2IF CCP1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 534: typedef union {
+[u S37 `S38 1 ]
+[n S37 . . ]
+"546
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 546: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS37 ~T0 @X0 0 e@17 ]
+"2703
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2703:     struct {
+[s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S140 . CCP2SEL P2BSEL P1CSEL P1DSEL ]
+"2702
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2702: typedef union {
+[u S139 `S140 1 ]
+[n S139 . . ]
+"2710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2710: extern volatile APFCON1bits_t APFCON1bits __attribute__((address(0x11E)));
+[v _APFCON1bits `VS139 ~T0 @X0 0 e@286 ]
+"4529
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 4529: extern volatile unsigned char CCP2CON __attribute__((address(0x29A)));
+[v _CCP2CON `Vuc ~T0 @X0 0 e@666 ]
+"4807
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 4807: extern volatile unsigned char CCPTMRS __attribute__((address(0x29E)));
+[v _CCPTMRS `Vuc ~T0 @X0 0 e@670 ]
+"4681
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 4681: extern volatile unsigned char CCP2AS __attribute__((address(0x29C)));
+[v _CCP2AS `Vuc ~T0 @X0 0 e@668 ]
+"911
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 911: extern volatile unsigned char PR2 __attribute__((address(0x01B)));
+[v _PR2 `Vuc ~T0 @X0 0 e@27 ]
+"4489
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 4489: extern volatile unsigned char CCPR2L __attribute__((address(0x298)));
+[v _CCPR2L `Vuc ~T0 @X0 0 e@664 ]
+"931
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 931: extern volatile unsigned char T2CON __attribute__((address(0x01C)));
+[v _T2CON `Vuc ~T0 @X0 0 e@28 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -633,18 +673,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40
 [; ;config.c: 40:     TRISCbits.TRISC5 = 0;
 [e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
-"41
-[; ;config.c: 41:     TRISAbits.TRISA5 = 0;
-[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
 "45
 [; ;config.c: 45:     TRISAbits.TRISA4 = 1;
 [e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
 "46
-[; ;config.c: 46:     TRISCbits.TRISC2 = 0;
-[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+[; ;config.c: 46:     TRISCbits.TRISC2 = 1;
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
 "47
-[; ;config.c: 47:     TRISCbits.TRISC3 = 0;
-[e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
+[; ;config.c: 47:     TRISCbits.TRISC3 = 1;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
 "50
 [; ;config.c: 50:     TRISCbits.TRISC0=1;
 [e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
@@ -678,5 +715,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [; ;config.c: 65: }
 [e :UE 328 ]
+}
+"68
+[; ;config.c: 68: void pwm_config(void)
+[v _pwm_config `(v ~T0 @X0 1 ef ]
+"69
+[; ;config.c: 69: {
+{
+[e :U _pwm_config ]
+[f ]
+"70
+[; ;config.c: 70:     TRISAbits.TRISA5 = 1;
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
+"71
+[; ;config.c: 71:     PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"72
+[; ;config.c: 72:     APFCON1bits.CCP2SEL = 1;
+[e = . . _APFCON1bits 0 0 -> -> 1 `i `uc ]
+"73
+[; ;config.c: 73:     CCP2CON=0b00001100;
+[e = _CCP2CON -> -> 12 `i `uc ]
+"74
+[; ;config.c: 74:     CCPTMRS = 0b00000000;
+[e = _CCPTMRS -> -> 0 `i `uc ]
+"75
+[; ;config.c: 75:     CCP2AS=0b00000000;
+[e = _CCP2AS -> -> 0 `i `uc ]
+"76
+[; ;config.c: 76:     PR2=0x65;
+[e = _PR2 -> -> 101 `i `uc ]
+"77
+[; ;config.c: 77:     CCPR2L=0;
+[e = _CCPR2L -> -> 0 `i `uc ]
+"78
+[; ;config.c: 78:     T2CON=0b00000100;
+[e = _T2CON -> -> 4 `i `uc ]
+"79
+[; ;config.c: 79:     TRISAbits.TRISA5 = 0;
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
+"80
+[; ;config.c: 80: }
+[e :UE 329 ]
 }
 [a 1C 80 97 117 108 32 73 111 114 103 97 0 ]

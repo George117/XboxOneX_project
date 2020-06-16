@@ -4102,8 +4102,9 @@ extern __bank0 __bit __timeout;
 # 10 "main.c" 2
 
 # 1 "./config.h" 1
-# 15 "./config.h"
+# 18 "./config.h"
 void config(void);
+void pwm_config(void);
 # 11 "main.c" 2
 
 # 1 "./i2c_display.h" 1
@@ -4137,8 +4138,41 @@ void Cursor_Right();
 
 void main(void) {
     config();
+    pwm_config();
+
+    CCPR2L = 0;
+    LATCbits.LATC4 = 0;
+    LATCbits.LATC5 = 1;
 
     while(1){
+        if(PORTAbits.RA0 == 1){
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("SST == PUSHED");
+            CCPR2L = 0;
+
+        }
+        else if(PORTAbits.RA2 == 1){
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("MINUS == PUSHED");
+            CCPR2L--;
+            _delay((unsigned long)((500)*(8000000/4000.0)));
+
+
+
+        }
+        else if(PORTAbits.RA1 == 1){
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("PLUS == PUSHED");
+
+            CCPR2L++;
+            _delay((unsigned long)((500)*(8000000/4000.0)));
+
+
+
+        }
+        else{
+            _delay((unsigned long)((100)*(8000000/4000.0)));
+        }
 
     }
 

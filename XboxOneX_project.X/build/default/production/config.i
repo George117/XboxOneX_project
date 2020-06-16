@@ -4101,8 +4101,9 @@ extern __bank0 __bit __timeout;
 # 9 "config.c" 2
 
 # 1 "./config.h" 1
-# 15 "./config.h"
+# 18 "./config.h"
 void config(void);
+void pwm_config(void);
 # 10 "config.c" 2
 
 # 1 "./i2c_display.h" 1
@@ -4162,13 +4163,13 @@ void config()
 
     TRISCbits.TRISC4 = 0;
     TRISCbits.TRISC5 = 0;
-    TRISAbits.TRISA5 = 0;
+
 
 
 
     TRISAbits.TRISA4 = 1;
-    TRISCbits.TRISC2 = 0;
-    TRISCbits.TRISC3 = 0;
+    TRISCbits.TRISC2 = 1;
+    TRISCbits.TRISC3 = 1;
 
 
     TRISCbits.TRISC0=1;
@@ -4186,4 +4187,19 @@ void config()
 
 
 
+}
+
+
+void pwm_config(void)
+{
+    TRISAbits.TRISA5 = 1;
+    PIR1bits.TMR2IF = 0;
+    APFCON1bits.CCP2SEL = 1;
+    CCP2CON=0b00001100;
+    CCPTMRS = 0b00000000;
+    CCP2AS=0b00000000;
+    PR2=0x65;
+    CCPR2L=0;
+    T2CON=0b00000100;
+    TRISAbits.TRISA5 = 0;
 }

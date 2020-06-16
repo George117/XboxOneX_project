@@ -15,6 +15,8 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "13 D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
 [v _config config `(v  1 e 1 0 ]
+"68
+[v _pwm_config pwm_config `(v  1 e 1 0 ]
 "19 D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
 "25
@@ -43,7 +45,7 @@
 [v _I2C_Write_Display I2C_Write_Display `(v  1 e 1 0 ]
 "14 D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 [v _main main `(v  1 e 1 0 ]
-[s S61 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S132 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -53,20 +55,46 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
-[s S70 . 1 `uc 1 . 1 0 :2:0 
+[s S141 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S75 . 1 `S61 1 . 1 0 `S70 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES75  1 e 1 @11 ]
+[u S146 . 1 `S132 1 . 1 0 `S141 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES146  1 e 1 @11 ]
 "429
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
+[s S48 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"444
+[u S55 . 1 `S48 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES55  1 e 1 @12 ]
 "479
 [v _PORTC PORTC `VEuc  1 e 1 @14 ]
+[s S227 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"546
+[u S236 . 1 `S227 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES236  1 e 1 @17 ]
+"911
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"931
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
 "1108
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-[s S101 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S172 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -74,11 +102,11 @@
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1123
-[u S108 . 1 `S101 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES108  1 e 1 @140 ]
+[u S179 . 1 `S172 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES179  1 e 1 @140 ]
 "1158
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S118 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S189 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -86,9 +114,9 @@
 `uc 1 TRISC5 1 0 :1:5 
 ]
 "1173
-[u S125 . 1 `S118 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES125  1 e 1 @142 ]
-[s S31 . 1 `uc 1 SCS0 1 0 :1:0 
+[u S196 . 1 `S189 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES196  1 e 1 @142 ]
+[s S102 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF0 1 0 :1:3 
@@ -98,16 +126,34 @@
 `uc 1 SPLLEN 1 0 :1:7 
 ]
 "1634
-[s S40 . 1 `uc 1 SCS 1 0 :2:0 
+[s S111 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF 1 0 :4:3 
 ]
-[u S44 . 1 `S31 1 . 1 0 `S40 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES44  1 e 1 @153 ]
+[u S115 . 1 `S102 1 . 1 0 `S111 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES115  1 e 1 @153 ]
 "1945
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "1990
 [v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S31 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+"2005
+[u S38 . 1 `S31 1 . 1 0 ]
+[v _LATCbits LATCbits `VES38  1 e 1 @270 ]
+[s S248 . 1 `uc 1 CCP2SEL 1 0 :1:0 
+`uc 1 P2BSEL 1 0 :1:1 
+`uc 1 P1CSEL 1 0 :1:2 
+`uc 1 P1DSEL 1 0 :1:3 
+]
+"2710
+[u S253 . 1 `S248 1 . 1 0 ]
+[v _APFCON1bits APFCON1bits `VES253  1 e 1 @286 ]
 "2735
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2782
@@ -124,7 +170,7 @@
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
 "3833
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S228 . 1 `uc 1 SEN 1 0 :1:0 
+[s S339 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -134,14 +180,27 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "3855
-[u S237 . 1 `S228 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES237  1 e 1 @534 ]
+[u S348 . 1 `S339 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES348  1 e 1 @534 ]
+"4489
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @664 ]
+"4529
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @666 ]
+"4681
+[v _CCP2AS CCP2AS `VEuc  1 e 1 @668 ]
+"4807
+[v _CCPTMRS CCPTMRS `VEuc  1 e 1 @670 ]
 "14 D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"21
+"54
 } 0
-"13 D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+"68 D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+[v _pwm_config pwm_config `(v  1 e 1 0 ]
+{
+"80
+} 0
+"13
 [v _config config `(v  1 e 1 0 ]
 {
 "65
