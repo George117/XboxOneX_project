@@ -78,3 +78,13 @@ void pwm_config(void)
     T2CON=0b00000100; 
     TRISAbits.TRISA5 = 0; 
 }
+
+void adc_config(void)
+{
+    TRISAbits.TRISA4=1; //AN3:Temp
+    ANSELAbits.ANSA4=1;
+    ADCON0=0b00001101;// AN3
+    
+    ADCON1=0b0001000;
+    
+}

@@ -17,4 +17,4 @@
 
 void config(void);
 void pwm_config(void);
-
+void adc_config(void);

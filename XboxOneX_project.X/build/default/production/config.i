@@ -4104,6 +4104,7 @@ extern __bank0 __bit __timeout;
 # 18 "./config.h"
 void config(void);
 void pwm_config(void);
+void adc_config(void);
 # 10 "config.c" 2
 
 # 1 "./i2c_display.h" 1
@@ -4202,4 +4203,14 @@ void pwm_config(void)
     CCPR2L=0;
     T2CON=0b00000100;
     TRISAbits.TRISA5 = 0;
+}
+
+void adc_config(void)
+{
+    TRISAbits.TRISA4=1;
+    ANSELAbits.ANSA4=1;
+    ADCON0=0b00001101;
+
+    ADCON1=0b0001000;
+
 }

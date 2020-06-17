@@ -13,11 +13,16 @@
 #include "config.h"
 #include "i2c_display.h"
 
+
+unsigned char read_Temp(void);//citire valoare tensinue de iesire
+
 char duty[3];
+char temp[3];
 
 void main(void) {
     config(); 
     pwm_config();
+    adc_config();
    
     PWM = 0;//60 min, 97 max
     IN1 = 0;
@@ -25,12 +30,18 @@ void main(void) {
     
     Lcd_Clear();
     
+    unsigned char res;
     while(1){
-        sprintf(duty, "%d", PWM);
+                // ((raw_value_from_adc * resolution )/ 10mv/k) - 273.5
+        res = (unsigned char)((read_Temp() * 0.01953)/0.01) - 273.5;
+        
+        sprintf(temp, "%d    ",res );
+        //sprintf(duty, "%d", PWM);
         
         Lcd_Set_Cursor(1,1);
-        Lcd_Write_String(duty);
+        Lcd_Write_String(temp);
         
+        __delay_ms(100);
         if(SST == PUSHED){
             Lcd_Set_Cursor(2,1);
             Lcd_Write_String("SST == PUSHED");
@@ -62,4 +73,13 @@ void main(void) {
             
     }
     
+}
+
+unsigned char read_Temp(void)//citire valoare tensinue de iesire
+{
+    ADCON0=0b00001101;//RA4
+    __delay_us(100);
+    ADCON0bits.GO=1;
+    while(ADCON0bits.GO==1){};
+    return ADRESH;
 }

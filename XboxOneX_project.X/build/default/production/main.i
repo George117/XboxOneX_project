@@ -4302,6 +4302,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 18 "./config.h"
 void config(void);
 void pwm_config(void);
+void adc_config(void);
 # 13 "main.c" 2
 
 # 1 "./i2c_display.h" 1
@@ -4333,11 +4334,16 @@ void Cursor_Right();
 # 14 "main.c" 2
 
 
+
+unsigned char read_Temp(void);
+
 char duty[3];
+char temp[3];
 
 void main(void) {
     config();
     pwm_config();
+    adc_config();
 
     CCPR2L = 0;
     LATCbits.LATC4 = 0;
@@ -4345,12 +4351,18 @@ void main(void) {
 
     Lcd_Clear();
 
+    unsigned char res;
     while(1){
-        sprintf(duty, "%d", CCPR2L);
+
+
+        res = (unsigned char)((read_Temp() * 0.01953)/0.01) - 273.5;
+        sprintf(temp, "%d    ",res );
+
 
         Lcd_Set_Cursor(1,1);
-        Lcd_Write_String(duty);
+        Lcd_Write_String(temp);
 
+        _delay((unsigned long)((100)*(8000000/4000.0)));
         if(PORTAbits.RA0 == 1){
             Lcd_Set_Cursor(2,1);
             Lcd_Write_String("SST == PUSHED");
@@ -4382,4 +4394,13 @@ void main(void) {
 
     }
 
+}
+
+unsigned char read_Temp(void)
+{
+    ADCON0=0b00001101;
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    ADCON0bits.GO=1;
+    while(ADCON0bits.GO==1){};
+    return ADRESH;
 }

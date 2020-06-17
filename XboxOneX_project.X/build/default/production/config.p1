@@ -137,6 +137,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "931
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 931: extern volatile unsigned char T2CON __attribute__((address(0x01C)));
 [v _T2CON `Vuc ~T0 @X0 0 e@28 ]
+"2741
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2741:     struct {
+[s S142 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S142 . ANSA0 ANSA1 ANSA2 . ANSA4 ]
+"2748
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2748:     struct {
+[s S143 :5 `uc 1 ]
+[n S143 . ANSELA ]
+"2740
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2740: typedef union {
+[u S141 `S142 1 `S143 1 ]
+[n S141 . . . ]
+"2752
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2752: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0x18C)));
+[v _ANSELAbits `VS141 ~T0 @X0 0 e@396 ]
+"1793
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1793: extern volatile unsigned char ADCON0 __attribute__((address(0x09D)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
+"1873
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1873: extern volatile unsigned char ADCON1 __attribute__((address(0x09E)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -757,5 +778,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80
 [; ;config.c: 80: }
 [e :UE 329 ]
+}
+"82
+[; ;config.c: 82: void adc_config(void)
+[v _adc_config `(v ~T0 @X0 1 ef ]
+"83
+[; ;config.c: 83: {
+{
+[e :U _adc_config ]
+[f ]
+"84
+[; ;config.c: 84:     TRISAbits.TRISA4=1;
+[e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
+"85
+[; ;config.c: 85:     ANSELAbits.ANSA4=1;
+[e = . . _ANSELAbits 0 4 -> -> 1 `i `uc ]
+"86
+[; ;config.c: 86:     ADCON0=0b00001101;
+[e = _ADCON0 -> -> 13 `i `uc ]
+"88
+[; ;config.c: 88:     ADCON1=0b0001000;
+[e = _ADCON1 -> -> 8 `i `uc ]
+"90
+[; ;config.c: 90: }
+[e :UE 330 ]
 }
 [a 1C 80 97 117 108 32 73 111 114 103 97 0 ]
