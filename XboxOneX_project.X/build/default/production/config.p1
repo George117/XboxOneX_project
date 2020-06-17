@@ -152,6 +152,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2752
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2752: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0x18C)));
 [v _ANSELAbits `VS141 ~T0 @X0 0 e@396 ]
+"2788
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2788:     struct {
+[s S145 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S145 . ANSC0 ANSC1 ANSC2 ANSC3 ]
+"2794
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2794:     struct {
+[s S146 :4 `uc 1 ]
+[n S146 . ANSELC ]
+"2787
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2787: typedef union {
+[u S144 `S145 1 `S146 1 ]
+[n S144 . . . ]
+"2798
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 2798: extern volatile ANSELCbits_t ANSELCbits __attribute__((address(0x18E)));
+[v _ANSELCbits `VS144 ~T0 @X0 0 e@398 ]
 "1793
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h: 1793: extern volatile unsigned char ADCON0 __attribute__((address(0x09D)));
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
@@ -788,19 +803,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _adc_config ]
 [f ]
 "84
-[; ;config.c: 84:     TRISAbits.TRISA4=1;
+[; ;config.c: 84:     TRISAbits.TRISA4 = 1;
 [e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
 "85
-[; ;config.c: 85:     ANSELAbits.ANSA4=1;
-[e = . . _ANSELAbits 0 4 -> -> 1 `i `uc ]
+[; ;config.c: 85:     TRISCbits.TRISC2 = 1;
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
 "86
-[; ;config.c: 86:     ADCON0=0b00001101;
-[e = _ADCON0 -> -> 13 `i `uc ]
+[; ;config.c: 86:     TRISCbits.TRISC3 = 1;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
 "88
-[; ;config.c: 88:     ADCON1=0b0001000;
-[e = _ADCON1 -> -> 8 `i `uc ]
+[; ;config.c: 88:     ANSELAbits.ANSA4 = 1;
+[e = . . _ANSELAbits 0 4 -> -> 1 `i `uc ]
+"89
+[; ;config.c: 89:     ANSELCbits.ANSC2 = 1;
+[e = . . _ANSELCbits 0 2 -> -> 1 `i `uc ]
 "90
-[; ;config.c: 90: }
+[; ;config.c: 90:     ANSELCbits.ANSC3 = 1;
+[e = . . _ANSELCbits 0 3 -> -> 1 `i `uc ]
+"93
+[; ;config.c: 93:     ADCON0=0b00001101;
+[e = _ADCON0 -> -> 13 `i `uc ]
+"94
+[; ;config.c: 94:     ADCON1=0b0101000;
+[e = _ADCON1 -> -> 40 `i `uc ]
+"96
+[; ;config.c: 96: }
 [e :UE 330 ]
 }
 [a 1C 80 97 117 108 32 73 111 114 103 97 0 ]

@@ -75,9 +75,27 @@ void main(void) {
     
 }
 
-unsigned char read_Temp(void)//citire valoare tensinue de iesire
+unsigned char read_Temp(void)
 {
     ADCON0=0b00001101;//RA4
+    __delay_us(100);
+    ADCON0bits.GO=1;
+    while(ADCON0bits.GO==1){};
+    return ADRESH;
+}
+
+unsigned char read_U(void)
+{
+    ADCON0=0b00011001;//RC2
+    __delay_us(100);
+    ADCON0bits.GO=1;
+    while(ADCON0bits.GO==1){};
+    return ADRESH;
+}
+
+unsigned char read_I(void)
+{
+    ADCON0=0b00011101;//RC3
     __delay_us(100);
     ADCON0bits.GO=1;
     while(ADCON0bits.GO==1){};

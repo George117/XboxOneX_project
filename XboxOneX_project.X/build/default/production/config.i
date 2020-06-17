@@ -4207,10 +4207,16 @@ void pwm_config(void)
 
 void adc_config(void)
 {
-    TRISAbits.TRISA4=1;
-    ANSELAbits.ANSA4=1;
-    ADCON0=0b00001101;
+    TRISAbits.TRISA4 = 1;
+    TRISCbits.TRISC2 = 1;
+    TRISCbits.TRISC3 = 1;
 
-    ADCON1=0b0001000;
+    ANSELAbits.ANSA4 = 1;
+    ANSELCbits.ANSC2 = 1;
+    ANSELCbits.ANSC3 = 1;
+
+
+    ADCON0=0b00001101;
+    ADCON1=0b0101000;
 
 }

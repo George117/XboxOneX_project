@@ -32,17 +32,17 @@ text16 CODE 0 178E 178E 1F 2
 text17 CODE 0 886 886 3F 2
 text18 CODE 0 908 908 49 2
 text19 CODE 0 8C5 8C5 43 2
-text20 CODE 0 16FE 16FE 9 2
+text20 CODE 0 16FA 16FA 9 2
 text21 CODE 0 17D0 17D0 30 2
 text22 CODE 0 9F6 9F6 5A 2
-text23 CODE 0 16F5 16F5 9 2
+text23 CODE 0 16F1 16F1 9 2
 text24 CODE 0 824 824 31 2
 text25 CODE 0 1742 1742 19 2
-text26 CODE 0 16EE 16EE 7 2
-text27 CODE 0 16E2 16E2 6 2
-text28 CODE 0 16DC 16DC 6 2
-text29 CODE 0 1711 1711 C 2
-text30 CODE 0 1707 1707 A 2
+text26 CODE 0 16EA 16EA 7 2
+text27 CODE 0 16DE 16DE 6 2
+text28 CODE 0 16D8 16D8 6 2
+text29 CODE 0 1703 1703 C 2
+text30 CODE 0 170F 170F E 2
 text31 CODE 0 B21 B21 AD 2
 text32 CODE 0 AAC AAC 75 2
 text33 CODE 0 304 304 257 2
@@ -60,8 +60,8 @@ stringtext4 STRCODE 0 182D 182D B 2
 stringtext5 STRCODE 0 1838 1838 7 2
 bssBANK0 BANK0 1 6D 6D 2 1
 bssBANK1 BANK1 1 A0 A0 2E 1
-clrtext CODE 0 16E8 16E8 6 2
-$C:\Users\georg\AppData\Local\Temp\s7v8.o
+clrtext CODE 0 16E4 16E4 6 2
+$C:\Users\georg\AppData\Local\Temp\sakk.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -95,10 +95,10 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 4-6 2
-CONST 1000-16DB 2
+CONST 1000-16D7 2
 CONST 183F-1FFF 2
 ENTRY 4-6 2
-ENTRY 1000-16DB 2
+ENTRY 1000-16D7 2
 ENTRY 183F-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -125,7 +125,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 209B-23EF 1
 CODE 4-6 2
-CODE 1000-16DB 2
+CODE 1000-16D7 2
 CODE 183F-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -143,10 +143,10 @@ BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
 STRCODE 4-6 2
-STRCODE 1000-16DB 2
+STRCODE 1000-16D7 2
 STRCODE 183F-1FFF 2
 STRING 4-6 2
-STRING 1000-16DB 2
+STRING 1000-16D7 2
 STRING 183F-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -162,20 +162,20 @@ STRING 183F-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\XboxOneX_project.X.production.o
-7F2 cinit CODE >1511:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F2 cinit CODE >1514:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F2 cinit CODE >1562:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F3 cinit CODE >1563:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F4 cinit CODE >1564:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F5 cinit CODE >1568:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F6 cinit CODE >1569:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F7 cinit CODE >1570:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F8 cinit CODE >1571:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7F9 cinit CODE >1572:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7FA cinit CODE >1573:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7FD cinit CODE >1579:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7FD cinit CODE >1581:C:\Users\georg\AppData\Local\Temp\s7v8.s
-7FE cinit CODE >1582:C:\Users\georg\AppData\Local\Temp\s7v8.s
+7F2 cinit CODE >1513:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F2 cinit CODE >1516:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F2 cinit CODE >1564:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F3 cinit CODE >1565:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F4 cinit CODE >1566:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F5 cinit CODE >1570:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F6 cinit CODE >1571:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F7 cinit CODE >1572:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F8 cinit CODE >1573:C:\Users\georg\AppData\Local\Temp\sakk.s
+7F9 cinit CODE >1574:C:\Users\georg\AppData\Local\Temp\sakk.s
+7FA cinit CODE >1575:C:\Users\georg\AppData\Local\Temp\sakk.s
+7FD cinit CODE >1581:C:\Users\georg\AppData\Local\Temp\sakk.s
+7FD cinit CODE >1583:C:\Users\georg\AppData\Local\Temp\sakk.s
+7FE cinit CODE >1584:C:\Users\georg\AppData\Local\Temp\sakk.s
 55B text36 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 55B text36 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 562 text36 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
@@ -528,27 +528,31 @@ BBB text31 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\c
 BC4 text31 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 BC5 text31 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 BCD text31 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1707 text30 CODE >82:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
-1707 text30 CODE >84:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
-1709 text30 CODE >85:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
-170B text30 CODE >86:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
-170E text30 CODE >88:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
-1710 text30 CODE >90:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
-1711 text29 CODE >174:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-1711 text29 CODE >176:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-171C text29 CODE >179:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16DC text28 CODE >181:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16DC text28 CODE >183:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16DF text28 CODE >184:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16E1 text28 CODE >185:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16E2 text27 CODE >193:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16E2 text27 CODE >195:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16E5 text27 CODE >196:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16E7 text27 CODE >197:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16EE text26 CODE >205:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16EE text26 CODE >207:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16F1 text26 CODE >208:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16F4 text26 CODE >209:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+170F text30 CODE >82:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+170F text30 CODE >84:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1711 text30 CODE >85:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1712 text30 CODE >86:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1713 text30 CODE >88:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1715 text30 CODE >89:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1716 text30 CODE >90:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1717 text30 CODE >93:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+171A text30 CODE >94:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+171C text30 CODE >96:D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
+1703 text29 CODE >174:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+1703 text29 CODE >176:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+170E text29 CODE >179:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16D8 text28 CODE >181:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16D8 text28 CODE >183:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16DB text28 CODE >184:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16DD text28 CODE >185:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16DE text27 CODE >193:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16DE text27 CODE >195:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16E1 text27 CODE >196:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16E3 text27 CODE >197:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16EA text26 CODE >205:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16EA text26 CODE >207:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16ED text26 CODE >208:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16F0 text26 CODE >209:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 1742 text25 CODE >19:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 1743 text25 CODE >20:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 1746 text25 CODE >21:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
@@ -565,10 +569,10 @@ BCD text31 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\c
 849 text24 CODE >40:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 850 text24 CODE >41:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 854 text24 CODE >42:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16F5 text23 CODE >139:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16F5 text23 CODE >141:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16F9 text23 CODE >142:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16FD text23 CODE >143:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16F1 text23 CODE >139:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16F1 text23 CODE >141:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16F5 text23 CODE >142:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16F9 text23 CODE >143:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 9F6 text22 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__lldiv.c
 9F6 text22 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__lldiv.c
 9FE text22 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__lldiv.c
@@ -593,10 +597,10 @@ A4F text22 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\c
 17FC text21 CODE >170:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 17FE text21 CODE >171:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 17FF text21 CODE >172:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16FE text20 CODE >44:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-16FE text20 CODE >46:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-1702 text20 CODE >47:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
-1706 text20 CODE >48:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16FA text20 CODE >44:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16FA text20 CODE >46:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+16FE text20 CODE >47:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
+1702 text20 CODE >48:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 8C5 text19 CODE >71:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 8C5 text19 CODE >73:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
 8C9 text19 CODE >74:D:\Git\XboxOneX_project\XboxOneX_project.X\i2c_display.c
@@ -857,7 +861,7 @@ CAA text3 CODE >1365:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\
 3B maintext CODE >28:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 3D maintext CODE >29:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 3E maintext CODE >31:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
-41 maintext CODE >37:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
+41 maintext CODE >36:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 D1 maintext CODE >38:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 E5 maintext CODE >41:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 EB maintext CODE >42:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
@@ -877,14 +881,14 @@ FF maintext CODE >45:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 13A maintext CODE >61:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 140 maintext CODE >62:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 147 maintext CODE >64:D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
-16E8 clrtext CODE >1551:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16E8 clrtext CODE >1552:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16E9 clrtext CODE >1553:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16E9 clrtext CODE >1554:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16EA clrtext CODE >1555:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16EB clrtext CODE >1556:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16EC clrtext CODE >1557:C:\Users\georg\AppData\Local\Temp\s7v8.s
-16ED clrtext CODE >1558:C:\Users\georg\AppData\Local\Temp\s7v8.s
+16E4 clrtext CODE >1553:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E4 clrtext CODE >1554:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E5 clrtext CODE >1555:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E5 clrtext CODE >1556:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E6 clrtext CODE >1557:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E7 clrtext CODE >1558:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E8 clrtext CODE >1559:C:\Users\georg\AppData\Local\Temp\sakk.s
+16E9 clrtext CODE >1560:C:\Users\georg\AppData\Local\Temp\sakk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -916,7 +920,7 @@ __Hstrings 0 0 ABS 0 strings -
 ?_vfprintf 5E 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 _LATA 10C 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 _LATC 10E 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\s7v8.o
+___sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\sakk.o
 _dbuf AB 0 BANK1 1 bssBANK1 dist/default/production\XboxOneX_project.X.production.o
 _dtoa 1D2C 0 CODE 0 text4 dist/default/production\XboxOneX_project.X.production.o
 _main 60 0 CODE 0 maintext dist/default/production\XboxOneX_project.X.production.o
@@ -929,7 +933,7 @@ _Lcd_Write_Char 110C 0 CODE 0 text17 dist/default/production\XboxOneX_project.X.
 pad@i 27 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 pad@p 25 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 pad@w 29 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
-start 4 0 CODE 0 init C:\Users\georg\AppData\Local\Temp\s7v8.o
+start 4 0 CODE 0 init C:\Users\georg\AppData\Local\Temp\sakk.o
 ___aomod@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 ___flmul@aexp 3C 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 ___flmul@bexp 3D 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
@@ -946,18 +950,18 @@ __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.productio
 __size_of_dtoa 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
-_I2C_Write_Display 2DDC 0 CODE 0 text26 dist/default/production\XboxOneX_project.X.production.o
+_I2C_Write_Display 2DD4 0 CODE 0 text26 dist/default/production\XboxOneX_project.X.production.o
 pad@fp 2B 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 Lcd_Write_Char@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_vfpfcnvrt 1956 0 CODE 0 text3 dist/default/production\XboxOneX_project.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s7v8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s7v8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s7v8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s7v8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s7v8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\s7v8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\sakk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\sakk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\sakk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\sakk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\sakk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\georg\AppData\Local\Temp\sakk.o
 _OSCCONbits 99 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -993,8 +997,8 @@ __end_of_config 1558 0 CODE 0 text15 dist/default/production\XboxOneX_project.X.
 ___aodiv@quotient 73 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\s7v8.o
-___stacklo 209B 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\s7v8.o
+___stackhi 23EF 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\sakk.o
+___stacklo 209B 0 ABS 0 - C:\Users\georg\AppData\Local\Temp\sakk.o
 ___aomod@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __size_of_fputs 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
@@ -1007,7 +1011,7 @@ ___flmul@a 2E 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.p
 ___flmul@b 2A 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 I2C_Write_Display@d 70 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 Lcd_Set_Cursor@temp 23 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
-_adc_config 2E0E 0 CODE 0 text30 dist/default/production\XboxOneX_project.X.production.o
+_adc_config 2E1E 0 CODE 0 text30 dist/default/production\XboxOneX_project.X.production.o
 ___lldiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 ___aomod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
@@ -1017,15 +1021,15 @@ _TRISCbits 8E 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 ___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 _Lcd_Write_String 2F1C 0 CODE 0 text16 dist/default/production\XboxOneX_project.X.production.o
-clear_ram0 2DD0 0 CODE 0 clrtext dist/default/production\XboxOneX_project.X.production.o
+clear_ram0 2DC8 0 CODE 0 clrtext dist/default/production\XboxOneX_project.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 __pcstackBANK1 CE 0 BANK1 1 cstackBANK1 dist/default/production\XboxOneX_project.X.production.o
 _SSPBUF 211 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
-_dtoa$713 3B 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
+_dtoa$737 3B 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 fputc@fp 72 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 fputs@fp 78 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\s7v8.o
+___int_sp 0 0 STACK 2 stack C:\Users\georg\AppData\Local\Temp\sakk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -1062,7 +1066,7 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
-_main$1268 E6 0 BANK1 1 cstackBANK1 dist/default/production\XboxOneX_project.X.production.o
+_main$1298 E6 0 BANK1 1 cstackBANK1 dist/default/production\XboxOneX_project.X.production.o
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -1096,7 +1100,7 @@ __end_of_sprintf 1048 0 CODE 0 text1 dist/default/production\XboxOneX_project.X.
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
-__end_of_adc_config 2E22 0 CODE 0 text30 dist/default/production\XboxOneX_project.X.production.o
+__end_of_adc_config 2E3A 0 CODE 0 text30 dist/default/production\XboxOneX_project.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -1185,22 +1189,22 @@ __S3 0 0 ABS 0 - -
 _abs 2EE8 0 CODE 0 text10 dist/default/production\XboxOneX_project.X.production.o
 _pad 1340 0 CODE 0 text5 dist/default/production\XboxOneX_project.X.production.o
 _config 14A0 0 CODE 0 text15 dist/default/production\XboxOneX_project.X.production.o
-_I2C_Master_Start 2DB8 0 CODE 0 text28 dist/default/production\XboxOneX_project.X.production.o
+_I2C_Master_Start 2DB0 0 CODE 0 text28 dist/default/production\XboxOneX_project.X.production.o
 ___aodiv@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 sprintf@fmt 66 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 __end_of_Lcd_Write_String 2F5A 0 CODE 0 text16 dist/default/production\XboxOneX_project.X.production.o
-_Cursor_Off 2DEA 0 CODE 0 text23 dist/default/production\XboxOneX_project.X.production.o
+_Cursor_Off 2DE2 0 CODE 0 text23 dist/default/production\XboxOneX_project.X.production.o
 ___xxtofl 1642 0 CODE 0 text31 dist/default/production\XboxOneX_project.X.production.o
 __end_of_abs 2F1C 0 CODE 0 text10 dist/default/production\XboxOneX_project.X.production.o
 __end_of_pad 13EC 0 CODE 0 text5 dist/default/production\XboxOneX_project.X.production.o
 __end_of_pwm_config 2E84 0 CODE 0 text14 dist/default/production\XboxOneX_project.X.production.o
-__end_of_Lcd_Clear 2E0E 0 CODE 0 text20 dist/default/production\XboxOneX_project.X.production.o
+__end_of_Lcd_Clear 2E06 0 CODE 0 text20 dist/default/production\XboxOneX_project.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 Lcd_Write_String@a 7A 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 Lcd_Write_String@i 20 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\georg\AppData\Local\Temp\s7v8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\georg\AppData\Local\Temp\sakk.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 strlen@s 74 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
@@ -1227,24 +1231,24 @@ __ptext16 2F1C 0 CODE 0 text16 dist/default/production\XboxOneX_project.X.produc
 __ptext17 110C 0 CODE 0 text17 dist/default/production\XboxOneX_project.X.production.o
 __ptext18 1210 0 CODE 0 text18 dist/default/production\XboxOneX_project.X.production.o
 __ptext19 118A 0 CODE 0 text19 dist/default/production\XboxOneX_project.X.production.o
-__ptext20 2DFC 0 CODE 0 text20 dist/default/production\XboxOneX_project.X.production.o
+__ptext20 2DF4 0 CODE 0 text20 dist/default/production\XboxOneX_project.X.production.o
 __ptext21 2FA0 0 CODE 0 text21 dist/default/production\XboxOneX_project.X.production.o
 __ptext22 13EC 0 CODE 0 text22 dist/default/production\XboxOneX_project.X.production.o
-__ptext23 2DEA 0 CODE 0 text23 dist/default/production\XboxOneX_project.X.production.o
+__ptext23 2DE2 0 CODE 0 text23 dist/default/production\XboxOneX_project.X.production.o
 __ptext24 1048 0 CODE 0 text24 dist/default/production\XboxOneX_project.X.production.o
 __ptext25 2E84 0 CODE 0 text25 dist/default/production\XboxOneX_project.X.production.o
-__ptext26 2DDC 0 CODE 0 text26 dist/default/production\XboxOneX_project.X.production.o
-__ptext27 2DC4 0 CODE 0 text27 dist/default/production\XboxOneX_project.X.production.o
-__ptext28 2DB8 0 CODE 0 text28 dist/default/production\XboxOneX_project.X.production.o
-__ptext29 2E22 0 CODE 0 text29 dist/default/production\XboxOneX_project.X.production.o
-__ptext30 2E0E 0 CODE 0 text30 dist/default/production\XboxOneX_project.X.production.o
+__ptext26 2DD4 0 CODE 0 text26 dist/default/production\XboxOneX_project.X.production.o
+__ptext27 2DBC 0 CODE 0 text27 dist/default/production\XboxOneX_project.X.production.o
+__ptext28 2DB0 0 CODE 0 text28 dist/default/production\XboxOneX_project.X.production.o
+__ptext29 2E06 0 CODE 0 text29 dist/default/production\XboxOneX_project.X.production.o
+__ptext30 2E1E 0 CODE 0 text30 dist/default/production\XboxOneX_project.X.production.o
 __ptext31 1642 0 CODE 0 text31 dist/default/production\XboxOneX_project.X.production.o
 __ptext32 1558 0 CODE 0 text32 dist/default/production\XboxOneX_project.X.production.o
 __ptext33 608 0 CODE 0 text33 dist/default/production\XboxOneX_project.X.production.o
 __ptext34 2F5A 0 CODE 0 text34 dist/default/production\XboxOneX_project.X.production.o
 __ptext35 2A0 0 CODE 0 text35 dist/default/production\XboxOneX_project.X.production.o
 __ptext36 AB6 0 CODE 0 text36 dist/default/production\XboxOneX_project.X.production.o
-_Lcd_Clear 2DFC 0 CODE 0 text20 dist/default/production\XboxOneX_project.X.production.o
+_Lcd_Clear 2DF4 0 CODE 0 text20 dist/default/production\XboxOneX_project.X.production.o
 __size_of_Lcd_Write_Char 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 ___aodiv 1B2A 0 CODE 0 text12 dist/default/production\XboxOneX_project.X.production.o
 ___aomod 1956 0 CODE 0 text11 dist/default/production\XboxOneX_project.X.production.o
@@ -1292,15 +1296,15 @@ ___fldiv@rem 51 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X
 __size_of_I2C_Write_Display 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 _strlen 2EB6 0 CODE 0 text6 dist/default/production\XboxOneX_project.X.production.o
 ___fldiv@new_exp 56 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
-__end_of_Cursor_Off 2DFC 0 CODE 0 text23 dist/default/production\XboxOneX_project.X.production.o
+__end_of_Cursor_Off 2DF4 0 CODE 0 text23 dist/default/production\XboxOneX_project.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __end_of_I2C_Master_Init 3000 0 CODE 0 text21 dist/default/production\XboxOneX_project.X.production.o
-__end_of_I2C_Master_Stop 2DD0 0 CODE 0 text27 dist/default/production\XboxOneX_project.X.production.o
-__end_of_I2C_Master_Wait 2E3A 0 CODE 0 text29 dist/default/production\XboxOneX_project.X.production.o
+__end_of_I2C_Master_Stop 2DC8 0 CODE 0 text27 dist/default/production\XboxOneX_project.X.production.o
+__end_of_I2C_Master_Wait 2E1E 0 CODE 0 text29 dist/default/production\XboxOneX_project.X.production.o
 _ADCON0bits 9D 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 ___fladd@grs 6C 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 ?_vfpfcnvrt 4E 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
-__end_of_I2C_Master_Start 2DC4 0 CODE 0 text28 dist/default/production\XboxOneX_project.X.production.o
+__end_of_I2C_Master_Start 2DBC 0 CODE 0 text28 dist/default/production\XboxOneX_project.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -1366,8 +1370,8 @@ __Lpowerup 0 0 CODE 0 powerup -
 _APFCON1bits 11E 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 _I2C_Master_Init 2FA0 0 CODE 0 text21 dist/default/production\XboxOneX_project.X.production.o
-_I2C_Master_Stop 2DC4 0 CODE 0 text27 dist/default/production\XboxOneX_project.X.production.o
-_I2C_Master_Wait 2E22 0 CODE 0 text29 dist/default/production\XboxOneX_project.X.production.o
+_I2C_Master_Stop 2DBC 0 CODE 0 text27 dist/default/production\XboxOneX_project.X.production.o
+_I2C_Master_Wait 2E06 0 CODE 0 text29 dist/default/production\XboxOneX_project.X.production.o
 sprintf@ap D0 0 BANK1 1 cstackBANK1 dist/default/production\XboxOneX_project.X.production.o
 ___fladd@aexp 6A 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 ___fladd@bexp 6B 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
@@ -1394,7 +1398,7 @@ __size_of_pwm_config 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.prod
 __CFG_PLLEN$OFF 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 ___lldiv@quotient 79 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
-__end_of_I2C_Write_Display 2DEA 0 CODE 0 text26 dist/default/production\XboxOneX_project.X.production.o
+__end_of_I2C_Write_Display 2DE2 0 CODE 0 text26 dist/default/production\XboxOneX_project.X.production.o
 _SSP1ADD 212 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 _SSP1BUF 211 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 __size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
@@ -1441,6 +1445,7 @@ dtoa@s 42 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.produ
 dtoa@w 40 0 BANK0 1 cstackBANK0 dist/default/production\XboxOneX_project.X.production.o
 __size_of_Cursor_Off 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 _ANSELAbits 18C 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
+_ANSELCbits 18E 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
 Lcd_Write_Char@a 77 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 Lcd_Write_Char@y 78 0 COMMON 1 cstackCOMMON dist/default/production\XboxOneX_project.X.production.o
 __size_of_I2C_Master_Init 0 0 ABS 0 - dist/default/production\XboxOneX_project.X.production.o
@@ -1490,17 +1495,17 @@ text16 0 178E 2F1C 1F 2
 text17 0 886 110C 3F 2
 text18 0 908 1210 49 2
 text19 0 8C5 118A 43 2
-text20 0 16FE 2DFC 9 2
+text20 0 16FA 2DF4 9 2
 text21 0 17D0 2FA0 30 2
 text22 0 9F6 13EC 5A 2
-text23 0 16F5 2DEA 9 2
+text23 0 16F1 2DE2 9 2
 text24 0 824 1048 31 2
 text25 0 1742 2E84 19 2
-text26 0 16EE 2DDC 7 2
-text27 0 16E2 2DC4 6 2
-text28 0 16DC 2DB8 6 2
-text29 0 1711 2E22 C 2
-text30 0 1707 2E0E A 2
+text26 0 16EA 2DD4 7 2
+text27 0 16DE 2DBC 6 2
+text28 0 16D8 2DB0 6 2
+text29 0 1703 2E06 C 2
+text30 0 170F 2E1E E 2
 text31 0 B21 1642 AD 2
 text32 0 AAC 1558 75 2
 text33 0 304 608 257 2
@@ -1513,7 +1518,7 @@ cstackBANK0 1 20 20 4F 1
 stringtext1 0 1800 3000 3F 2
 reset_vec 0 0 0 4 2
 bssBANK1 1 A0 A0 4B 1
-clrtext 0 16E8 2DD0 6 2
+clrtext 0 16E4 2DC8 6 2
 config 0 8007 1000E 2 2
 # OTES Section
 # This section contains data of all the note-psects.  The beginning of the section

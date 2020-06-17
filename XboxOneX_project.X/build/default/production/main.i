@@ -4354,8 +4354,8 @@ void main(void) {
     unsigned char res;
     while(1){
 
-
         res = (unsigned char)((read_Temp() * 0.01953)/0.01) - 273.5;
+
         sprintf(temp, "%d    ",res );
 
 
@@ -4399,6 +4399,24 @@ void main(void) {
 unsigned char read_Temp(void)
 {
     ADCON0=0b00001101;
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    ADCON0bits.GO=1;
+    while(ADCON0bits.GO==1){};
+    return ADRESH;
+}
+
+unsigned char read_U(void)
+{
+    ADCON0=0b00011001;
+    _delay((unsigned long)((100)*(8000000/4000000.0)));
+    ADCON0bits.GO=1;
+    while(ADCON0bits.GO==1){};
+    return ADRESH;
+}
+
+unsigned char read_I(void)
+{
+    ADCON0=0b00011101;
     _delay((unsigned long)((100)*(8000000/4000000.0)));
     ADCON0bits.GO=1;
     while(ADCON0bits.GO==1){};

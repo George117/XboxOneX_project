@@ -586,8 +586,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 34:     while(1){
 [e :U 333 ]
 {
-"37
-[; ;main.c: 37:         res = (unsigned char)((read_Temp() * 0.01953)/0.01) - 273.5;
+"36
+[; ;main.c: 36:         res = (unsigned char)((read_Temp() * 0.01953)/0.01) - 273.5;
 [e = _res -> - -> -> -> / * -> -> ( _read_Temp ..  `i `d .0.01953 .0.01 `uc `i `d .273.5 `uc ]
 "38
 [; ;main.c: 38:         sprintf(temp, "%d    ",res );
@@ -716,6 +716,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "85
 [; ;main.c: 85: }
 [e :UE 341 ]
+}
+"87
+[; ;main.c: 87: unsigned char read_U(void)
+[v _read_U `(uc ~T0 @X0 1 ef ]
+"88
+[; ;main.c: 88: {
+{
+[e :U _read_U ]
+[f ]
+"89
+[; ;main.c: 89:     ADCON0=0b00011001;
+[e = _ADCON0 -> -> 25 `i `uc ]
+"90
+[; ;main.c: 90:     _delay((unsigned long)((100)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"91
+[; ;main.c: 91:     ADCON0bits.GO=1;
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"92
+[; ;main.c: 92:     while(ADCON0bits.GO==1){};
+[e $U 346  ]
+[e :U 347 ]
+{
+}
+[e :U 346 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 347  ]
+[e :U 348 ]
+"93
+[; ;main.c: 93:     return ADRESH;
+[e ) _ADRESH ]
+[e $UE 345  ]
+"94
+[; ;main.c: 94: }
+[e :UE 345 ]
+}
+"96
+[; ;main.c: 96: unsigned char read_I(void)
+[v _read_I `(uc ~T0 @X0 1 ef ]
+"97
+[; ;main.c: 97: {
+{
+[e :U _read_I ]
+[f ]
+"98
+[; ;main.c: 98:     ADCON0=0b00011101;
+[e = _ADCON0 -> -> 29 `i `uc ]
+"99
+[; ;main.c: 99:     _delay((unsigned long)((100)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"100
+[; ;main.c: 100:     ADCON0bits.GO=1;
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"101
+[; ;main.c: 101:     while(ADCON0bits.GO==1){};
+[e $U 350  ]
+[e :U 351 ]
+{
+}
+[e :U 350 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 351  ]
+[e :U 352 ]
+"102
+[; ;main.c: 102:     return ADRESH;
+[e ) _ADRESH ]
+[e $UE 349  ]
+"103
+[; ;main.c: 103: }
+[e :UE 349 ]
 }
 [p f _sprintf 8388736 ]
 [a 2C 83 83 84 32 61 61 32 80 85 83 72 69 68 0 ]
