@@ -103,15 +103,15 @@
 [v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
 "205
 [v _I2C_Write_Display I2C_Write_Display `(v  1 e 1 0 ]
-"41 D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
+"40 D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"112
-[v _read_Temp read_Temp `(uc  1 e 1 0 ]
-"127
-[v _read_U read_U `(uc  1 e 1 0 ]
 "142
+[v _read_Temp read_Temp `(uc  1 e 1 0 ]
+"157
+[v _read_U read_U `(uc  1 e 1 0 ]
+"172
 [v _read_I read_I `(uc  1 e 1 0 ]
-[s S222 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S225 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -121,13 +121,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1825.h
-[s S231 . 1 `uc 1 . 1 0 :2:0 
+[s S234 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S236 . 1 `S222 1 . 1 0 `S231 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES236  1 e 1 @11 ]
+[u S239 . 1 `S225 1 . 1 0 `S234 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES239  1 e 1 @11 ]
 "429
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
 [s S91 . 1 `uc 1 RA0 1 0 :1:0 
@@ -142,7 +142,7 @@
 [v _PORTAbits PORTAbits `VES98  1 e 1 @12 ]
 "479
 [v _PORTC PORTC `VEuc  1 e 1 @14 ]
-[s S314 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S317 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -152,15 +152,15 @@
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "546
-[u S323 . 1 `S314 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES323  1 e 1 @17 ]
+[u S326 . 1 `S317 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES326  1 e 1 @17 ]
 "911
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "931
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
 "1108
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-[s S262 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S265 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -168,11 +168,11 @@
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1123
-[u S269 . 1 `S262 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES269  1 e 1 @140 ]
+[u S272 . 1 `S265 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES272  1 e 1 @140 ]
 "1158
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S279 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S282 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -180,9 +180,9 @@
 `uc 1 TRISC5 1 0 :1:5 
 ]
 "1173
-[u S286 . 1 `S279 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES286  1 e 1 @142 ]
-[s S192 . 1 `uc 1 SCS0 1 0 :1:0 
+[u S289 . 1 `S282 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES289  1 e 1 @142 ]
+[s S195 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF0 1 0 :1:3 
@@ -192,12 +192,12 @@
 `uc 1 SPLLEN 1 0 :1:7 
 ]
 "1634
-[s S201 . 1 `uc 1 SCS 1 0 :2:0 
+[s S204 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF 1 0 :4:3 
 ]
-[u S205 . 1 `S192 1 . 1 0 `S201 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES205  1 e 1 @153 ]
+[u S208 . 1 `S195 1 . 1 0 `S204 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES208  1 e 1 @153 ]
 "1773
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1793
@@ -236,39 +236,39 @@
 "2005
 [u S42 . 1 `S35 1 . 1 0 ]
 [v _LATCbits LATCbits `VES42  1 e 1 @270 ]
-[s S335 . 1 `uc 1 CCP2SEL 1 0 :1:0 
+[s S338 . 1 `uc 1 CCP2SEL 1 0 :1:0 
 `uc 1 P2BSEL 1 0 :1:1 
 `uc 1 P1CSEL 1 0 :1:2 
 `uc 1 P1DSEL 1 0 :1:3 
 ]
 "2710
-[u S340 . 1 `S335 1 . 1 0 ]
-[v _APFCON1bits APFCON1bits `VES340  1 e 1 @286 ]
+[u S343 . 1 `S338 1 . 1 0 ]
+[v _APFCON1bits APFCON1bits `VES343  1 e 1 @286 ]
 "2735
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-[s S354 . 1 `uc 1 ANSA0 1 0 :1:0 
+[s S357 . 1 `uc 1 ANSA0 1 0 :1:0 
 `uc 1 ANSA1 1 0 :1:1 
 `uc 1 ANSA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 ANSA4 1 0 :1:4 
 ]
 "2752
-[s S360 . 1 `uc 1 ANSELA 1 0 :5:0 
+[s S363 . 1 `uc 1 ANSELA 1 0 :5:0 
 ]
-[u S362 . 1 `S354 1 . 1 0 `S360 1 . 1 0 ]
-[v _ANSELAbits ANSELAbits `VES362  1 e 1 @396 ]
+[u S365 . 1 `S357 1 . 1 0 `S363 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES365  1 e 1 @396 ]
 "2782
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
-[s S374 . 1 `uc 1 ANSC0 1 0 :1:0 
+[s S377 . 1 `uc 1 ANSC0 1 0 :1:0 
 `uc 1 ANSC1 1 0 :1:1 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 ]
 "2798
-[s S379 . 1 `uc 1 ANSELC 1 0 :4:0 
+[s S382 . 1 `uc 1 ANSELC 1 0 :4:0 
 ]
-[u S381 . 1 `S374 1 . 1 0 `S379 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES381  1 e 1 @398 ]
+[u S384 . 1 `S377 1 . 1 0 `S382 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES384  1 e 1 @398 ]
 "3393
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
 "3398
@@ -281,7 +281,7 @@
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
 "3833
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S476 . 1 `uc 1 SEN 1 0 :1:0 
+[s S479 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -291,8 +291,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "3855
-[u S485 . 1 `S476 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES485  1 e 1 @534 ]
+[u S488 . 1 `S479 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES488  1 e 1 @534 ]
 "4489
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @664 ]
 "4529
@@ -327,20 +327,22 @@
 [v _current current `f  1 e 4 0 ]
 "34
 [v _voltage voltage `f  1 e 4 0 ]
-"41
+"37
+[v _sst_button sst_button `uc  1 e 1 0 ]
+"40
 [v _main main `(v  1 e 1 0 ]
 {
-"53
+"52
 [v main@i i `i  1 a 2 47 ]
-"110
+"140
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@s s `*.5uc  1 a 1 wreg ]
-[s S1199 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[s S1202 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
 "13
-[v sprintf@f f `S1199  1 a 5 34 ]
+[v sprintf@f f `S1202  1 a 5 34 ]
 "12
 [v sprintf@ap ap `[1]*.5v  1 a 1 33 ]
 "9
@@ -353,36 +355,36 @@
 "1368 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S716 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.5S716  1 a 1 wreg ]
+[s S719 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.5S719  1 a 1 wreg ]
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 21 ]
 "1368
-[v vfprintf@fp fp `*.5S716  1 a 1 wreg ]
+[v vfprintf@fp fp `*.5S719  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 15 ]
 [v vfprintf@ap ap `*.5*.5v  1 p 1 17 ]
 "1373
 "1368
-[v vfprintf@fp fp `*.5S716  1 a 1 20 ]
+[v vfprintf@fp fp `*.5S719  1 a 1 20 ]
 "1382
 } 0
 "670
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S716 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.5S716  1 a 1 wreg ]
+[s S719 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.5S719  1 a 1 wreg ]
 "676
 [v vfpfcnvrt@f f `d  1 a 4 6 ]
 "672
 [v vfpfcnvrt@ct ct `[3]uc  1 a 3 10 ]
 [v vfpfcnvrt@c c `uc  1 a 1 13 ]
 "670
-[v vfpfcnvrt@fp fp `*.5S716  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.5S719  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.5*.25uc  1 p 1 78 ]
 [v vfpfcnvrt@ap ap `*.5*.5v  1 p 1 79 ]
 "680
 "670
-[v vfpfcnvrt@fp fp `*.5S716  1 a 1 14 ]
+[v vfpfcnvrt@fp fp `*.5S719  1 a 1 14 ]
 "1365
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strncmp.c
@@ -403,8 +405,8 @@
 "319 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
 [v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
 {
-[s S716 _IO_FILE 0 ]
-[v efgtoa@fp fp `*.5S716  1 a 1 wreg ]
+[s S719 _IO_FILE 0 ]
+[v efgtoa@fp fp `*.5S719  1 a 1 wreg ]
 "323
 [v efgtoa@u u `d  1 a 4 70 ]
 [v efgtoa@g g `d  1 a 4 62 ]
@@ -427,12 +429,12 @@
 [v efgtoa@mode mode `uc  1 a 1 51 ]
 [v efgtoa@nmode nmode `uc  1 a 1 48 ]
 "319
-[v efgtoa@fp fp `*.5S716  1 a 1 wreg ]
+[v efgtoa@fp fp `*.5S719  1 a 1 wreg ]
 [v efgtoa@f f `d  1 p 4 8 ]
 [v efgtoa@c c `uc  1 p 1 12 ]
 "326
 "319
-[v efgtoa@fp fp `*.5S716  1 a 1 45 ]
+[v efgtoa@fp fp `*.5S719  1 a 1 45 ]
 "503
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\tolower.c
@@ -465,18 +467,18 @@
 "72 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
 [v _pad pad `(i  1 s 2 pad ]
 {
-[s S716 _IO_FILE 0 ]
-[v pad@fp fp `*.5S716  1 a 1 wreg ]
+[s S719 _IO_FILE 0 ]
+[v pad@fp fp `*.5S719  1 a 1 wreg ]
 "74
 [v pad@w w `i  1 a 2 9 ]
 [v pad@i i `i  1 a 2 7 ]
 "72
-[v pad@fp fp `*.5S716  1 a 1 wreg ]
+[v pad@fp fp `*.5S719  1 a 1 wreg ]
 [v pad@buf buf `*.6uc  1 p 1 4 ]
 [v pad@p p `i  1 p 2 5 ]
 "77
 "72
-[v pad@fp fp `*.5S716  1 a 1 11 ]
+[v pad@fp fp `*.5S719  1 a 1 11 ]
 "95
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
@@ -501,8 +503,8 @@
 [v fputs@c c `uc  1 a 1 0 ]
 "8
 [v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S1199 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.5S1199  1 p 1 8 ]
+[s S1202 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.5S1202  1 p 1 8 ]
 "13
 [v fputs@s s `*.6DCuc  1 a 1 3 ]
 "19
@@ -511,8 +513,8 @@
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S1199 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.5S1199  1 p 1 2 ]
+[s S1202 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.5S1202  1 p 1 2 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\putch.c
@@ -523,9 +525,9 @@
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1133 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1136 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1133  1 a 4 74 ]
+[v floorf@u u `S1136  1 a 4 74 ]
 "7
 [v floorf@m m `ul  1 a 4 68 ]
 "6
@@ -533,21 +535,21 @@
 "3
 [v floorf@x x `f  1 p 4 58 ]
 "4
-[v floorf@F524 F524 `S1133  1 s 4 F524 ]
+[v floorf@F524 F524 `S1136  1 s 4 F524 ]
 "27
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1133 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1136 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1133  1 a 4 2 ]
+[v ___fpclassifyf@u u `S1136  1 a 4 2 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 0 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 0 ]
 "5
-[v ___fpclassifyf@F463 F463 `S1133  1 s 4 F463 ]
+[v ___fpclassifyf@F463 F463 `S1136  1 s 4 F463 ]
 "11
 } 0
 "43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
@@ -592,17 +594,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S991 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S994 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S996 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S999 . 4 `l 1 i 4 0 `d 1 f 4 0 `S991 1 fAsBytes 4 0 `S996 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S999  1 a 4 26 ]
+[s S999 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1002 . 4 `l 1 i 4 0 `d 1 f 4 0 `S994 1 fAsBytes 4 0 `S999 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1002  1 a 4 26 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 20 ]
-[s S1068 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1071 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1071 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1068 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1071  1 a 2 30 ]
+[u S1074 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1071 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1074  1 a 2 30 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 25 ]
 "11
@@ -718,20 +720,20 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"127 D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
+"157 D:\Git\XboxOneX_project\XboxOneX_project.X\main.c
 [v _read_U read_U `(uc  1 e 1 0 ]
 {
-"140
-} 0
-"112
-[v _read_Temp read_Temp `(uc  1 e 1 0 ]
-{
-"125
+"170
 } 0
 "142
-[v _read_I read_I `(uc  1 e 1 0 ]
+[v _read_Temp read_Temp `(uc  1 e 1 0 ]
 {
 "155
+} 0
+"172
+[v _read_I read_I `(uc  1 e 1 0 ]
+{
+"185
 } 0
 "68 D:\Git\XboxOneX_project\XboxOneX_project.X\config.c
 [v _pwm_config pwm_config `(v  1 e 1 0 ]

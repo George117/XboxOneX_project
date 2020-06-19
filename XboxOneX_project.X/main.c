@@ -33,17 +33,16 @@ float temperature;
 float current;
 float voltage;
 
-
 float buffer;
+unsigned char sst_button;
 
-unsigned char counter = 1;
-    
+
 void main(void) {
     config(); 
     pwm_config();
     adc_config();
    
-    PWM = 110;//60 min, 97 max
+    PWM = 0;//60 min, 97 max
     IN1 = 0;
     IN2 = 1;
     
@@ -64,38 +63,44 @@ void main(void) {
         current = ((read_I() * 0.01953)/11)/0.11;
      
         voltage = (read_U() *0.01953)/0.25;
-              
+        
         Lcd_Set_Cursor(1,1);
         sprintf(temp, "%2.1f",voltage);
         Lcd_Write_String(temp);
-       // Lcd_Set_Cursor(1,6);
         Lcd_Write_String(" V");
         
         Lcd_Set_Cursor(1,12);
         sprintf(temp, "%2.1f",current);
         Lcd_Write_String(temp);
-        //Lcd_Set_Cursor(1,16);
         Lcd_Write_String(" A");
         
         Lcd_Set_Cursor(2,1);
         sprintf(temp, "%2.1f",temperature);  
         Lcd_Write_String(temp);  
-        //Lcd_Set_Cursor(2,6);
         Lcd_Write_String(" C");
-        
-        
         
 
         __delay_ms(100);
         if(SST == PUSHED){
-            PWM = 55;
+            if(sst_button == 0){
+                PWM = 80;
+                sst_button = 1;
+                __delay_ms(1000);  
+            }
+            else{
+                PWM = 0;
+                sst_button = 0;
+                __delay_ms(1000);  
+            }
+            
+            
         }
         else if(MINUS == PUSHED){
-              PWM--;
+              PWM = PWM - 10;
             __delay_ms(100);   
         }
         else if(PLUS == PUSHED){  
-            PWM++;
+            PWM= PWM + 10;
             __delay_ms(100);
 
 
@@ -104,7 +109,32 @@ void main(void) {
             __delay_ms(100);
         }
         
-
+        if(voltage>17){
+            PWM=0;
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Overvoltage");
+            __delay_ms(5000);
+            break;
+        }
+        if(temperature>55){
+            PWM=0;
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Overtemperature");
+            __delay_ms(5000);
+            break;
+        }
+        
+         if(current>1){
+            PWM=0;
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Overcurrent");
+            __delay_ms(5000);
+            break;
+        }
+        
     }
     
 }

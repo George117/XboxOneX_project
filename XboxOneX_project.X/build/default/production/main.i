@@ -4354,17 +4354,16 @@ float temperature;
 float current;
 float voltage;
 
-
 float buffer;
+unsigned char sst_button;
 
-unsigned char counter = 1;
 
 void main(void) {
     config();
     pwm_config();
     adc_config();
 
-    CCPR2L = 110;
+    CCPR2L = 0;
     LATCbits.LATC4 = 0;
     LATCbits.LATC5 = 1;
 
@@ -4389,34 +4388,40 @@ void main(void) {
         Lcd_Set_Cursor(1,1);
         sprintf(temp, "%2.1f",voltage);
         Lcd_Write_String(temp);
-
         Lcd_Write_String(" V");
 
         Lcd_Set_Cursor(1,12);
         sprintf(temp, "%2.1f",current);
         Lcd_Write_String(temp);
-
         Lcd_Write_String(" A");
 
         Lcd_Set_Cursor(2,1);
         sprintf(temp, "%2.1f",temperature);
         Lcd_Write_String(temp);
-
         Lcd_Write_String(" C");
-
-
 
 
         _delay((unsigned long)((100)*(8000000/4000.0)));
         if(PORTAbits.RA0 == 1){
-            CCPR2L = 55;
+            if(sst_button == 0){
+                CCPR2L = 80;
+                sst_button = 1;
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+            }
+            else{
+                CCPR2L = 0;
+                sst_button = 0;
+                _delay((unsigned long)((1000)*(8000000/4000.0)));
+            }
+
+
         }
         else if(PORTAbits.RA1 == 1){
-              CCPR2L--;
+              CCPR2L = CCPR2L - 10;
             _delay((unsigned long)((100)*(8000000/4000.0)));
         }
         else if(PORTAbits.RA2 == 1){
-            CCPR2L++;
+            CCPR2L= CCPR2L + 10;
             _delay((unsigned long)((100)*(8000000/4000.0)));
 
 
@@ -4425,6 +4430,31 @@ void main(void) {
             _delay((unsigned long)((100)*(8000000/4000.0)));
         }
 
+        if(voltage>17){
+            CCPR2L=0;
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Overvoltage");
+            _delay((unsigned long)((5000)*(8000000/4000.0)));
+            break;
+        }
+        if(temperature>55){
+            CCPR2L=0;
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Overtemperature");
+            _delay((unsigned long)((5000)*(8000000/4000.0)));
+            break;
+        }
+
+         if(current>1){
+            CCPR2L=0;
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Overcurrent");
+            _delay((unsigned long)((5000)*(8000000/4000.0)));
+            break;
+        }
 
     }
 
