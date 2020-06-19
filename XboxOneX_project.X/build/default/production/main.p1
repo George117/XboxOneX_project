@@ -29,12 +29,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 main.c
 [; ;main.c: 17: unsigned char read_Temp(void);
 [v _read_Temp `(uc ~T0 @X0 0 ef ]
-"113 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"18
+[; ;main.c: 18: unsigned char read_I(void);
+[v _read_I `(uc ~T0 @X0 0 ef ]
+"19
+[; ;main.c: 19: unsigned char read_U(void);
+[v _read_U `(uc ~T0 @X0 0 ef ]
 "50 ./i2c_display.h
 [; ;./i2c_display.h: 50: void Lcd_Set_Cursor(char a, char b);
 [v _Lcd_Set_Cursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"53
+"113 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"53 ./i2c_display.h
 [; ;./i2c_display.h: 53: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
 [v F2300 `(v ~T0 @X0 1 tf1`ul ]
@@ -545,248 +551,393 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BORV = LO ]
 "28
 [p x LVP = ON ]
-"19 main.c
-[; ;main.c: 19: char duty[3];
-[v _duty `uc ~T0 @X0 -> 3 `i e ]
-"20
-[; ;main.c: 20: char temp[3];
-[v _temp `uc ~T0 @X0 -> 3 `i e ]
+"21 main.c
+[; ;main.c: 21: char temp[5];
+[v _temp `uc ~T0 @X0 -> 5 `i e ]
+"23
+[; ;main.c: 23: unsigned int high_i,low_i,high_u,low_u,high_t,low_t;
+[v _high_i `ui ~T0 @X0 1 e ]
+[v _low_i `ui ~T0 @X0 1 e ]
+[v _high_u `ui ~T0 @X0 1 e ]
+[v _low_u `ui ~T0 @X0 1 e ]
+[v _high_t `ui ~T0 @X0 1 e ]
+[v _low_t `ui ~T0 @X0 1 e ]
+"24
+[; ;main.c: 24: unsigned int esantion_curent_u,esantion_curent_i,esantion_curent_t;
+[v _esantion_curent_u `ui ~T0 @X0 1 e ]
+[v _esantion_curent_i `ui ~T0 @X0 1 e ]
+[v _esantion_curent_t `ui ~T0 @X0 1 e ]
+"27
+[; ;main.c: 27: unsigned int esantioane_u[4] = {0x00,0x00,0x00,0x00};
+[v _esantioane_u `ui ~T0 @X0 -> 4 `i e ]
+[i _esantioane_u
+:U ..
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+]
+"28
+[; ;main.c: 28: unsigned int esantioane_i[4] = {0x00,0x00,0x00,0x00};
+[v _esantioane_i `ui ~T0 @X0 -> 4 `i e ]
+[i _esantioane_i
+:U ..
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+]
+"29
+[; ;main.c: 29: unsigned int esantioane_t[4] = {0x00,0x00,0x00,0x00};
+[v _esantioane_t `ui ~T0 @X0 -> 4 `i e ]
+[i _esantioane_t
+:U ..
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+]
+"32
+[; ;main.c: 32: float temperature;
+[v _temperature `f ~T0 @X0 1 e ]
+"33
+[; ;main.c: 33: float current;
+[v _current `f ~T0 @X0 1 e ]
+"34
+[; ;main.c: 34: float voltage;
+[v _voltage `f ~T0 @X0 1 e ]
+"37
+[; ;main.c: 37: float buffer;
+[v _buffer `f ~T0 @X0 1 e ]
+"39
+[; ;main.c: 39: unsigned char counter = 1;
+[v _counter `uc ~T0 @X0 1 e ]
+[i _counter
+-> -> 1 `i `uc
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"22
-[; ;main.c: 22: void main(void) {
+"41
+[; ;main.c: 41: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"23
-[; ;main.c: 23:     config();
-[e ( _config ..  ]
-"24
-[; ;main.c: 24:     pwm_config();
-[e ( _pwm_config ..  ]
-"25
-[; ;main.c: 25:     adc_config();
-[e ( _adc_config ..  ]
-"27
-[; ;main.c: 27:     CCPR2L = 0;
-[e = _CCPR2L -> -> 0 `i `uc ]
-"28
-[; ;main.c: 28:     LATCbits.LATC4 = 0;
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-"29
-[; ;main.c: 29:     LATCbits.LATC5 = 1;
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-"31
-[; ;main.c: 31:     Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
-"33
-[; ;main.c: 33:     unsigned char res;
-[v _res `uc ~T0 @X0 1 a ]
-"34
-[; ;main.c: 34:     while(1){
-[e :U 333 ]
-{
-"36
-[; ;main.c: 36:         res = (unsigned char)((read_Temp() * 0.01953)/0.01) - 273.5;
-[e = _res -> - -> -> -> / * -> -> ( _read_Temp ..  `i `d .0.01953 .0.01 `uc `i `d .273.5 `uc ]
-"38
-[; ;main.c: 38:         sprintf(temp, "%d    ",res );
-[e ( _sprintf (1 , (. , &U _temp :s 1C -> _res `i ]
-"41
-[; ;main.c: 41:         Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "42
-[; ;main.c: 42:         Lcd_Write_String(temp);
-[e ( _Lcd_Write_String (1 &U _temp ]
+[; ;main.c: 42:     config();
+[e ( _config ..  ]
+"43
+[; ;main.c: 43:     pwm_config();
+[e ( _pwm_config ..  ]
 "44
-[; ;main.c: 44:         _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"45
-[; ;main.c: 45:         if(PORTAbits.RA0 == 1){
-[e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 335  ]
-{
+[; ;main.c: 44:     adc_config();
+[e ( _adc_config ..  ]
 "46
-[; ;main.c: 46:             Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 46:     CCPR2L = 110;
+[e = _CCPR2L -> -> 110 `i `uc ]
 "47
-[; ;main.c: 47:             Lcd_Write_String("SST == PUSHED");
-[e ( _Lcd_Write_String (1 :s 2C ]
+[; ;main.c: 47:     LATCbits.LATC4 = 0;
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 "48
-[; ;main.c: 48:             CCPR2L = 0;
-[e = _CCPR2L -> -> 0 `i `uc ]
+[; ;main.c: 48:     LATCbits.LATC5 = 1;
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 "50
-[; ;main.c: 50:         }
-}
-[e $U 336  ]
-"51
-[; ;main.c: 51:         else if(PORTAbits.RA1 == 1){
-[e :U 335 ]
-[e $ ! == -> . . _PORTAbits 0 1 `i -> 1 `i 337  ]
-{
-"52
-[; ;main.c: 52:             Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 50:     Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
 "53
-[; ;main.c: 53:             Lcd_Write_String("MINUS == PUSHED");
-[e ( _Lcd_Write_String (1 :s 3C ]
-"54
-[; ;main.c: 54:             CCPR2L--;
-[e -- _CCPR2L -> -> 1 `i `Vuc ]
-"55
-[; ;main.c: 55:             _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"59
-[; ;main.c: 59:         }
-}
-[e $U 338  ]
-"60
-[; ;main.c: 60:         else if(PORTAbits.RA2 == 1){
-[e :U 337 ]
-[e $ ! == -> . . _PORTAbits 0 2 `i -> 1 `i 339  ]
+[; ;main.c: 53:     for(int i=0;i<30;i++){
 {
-"61
-[; ;main.c: 61:             Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"62
-[; ;main.c: 62:             Lcd_Write_String("PLUS == PUSHED");
-[e ( _Lcd_Write_String (1 :s 4C ]
-"64
-[; ;main.c: 64:             CCPR2L++;
-[e ++ _CCPR2L -> -> 1 `i `Vuc ]
-"65
-[; ;main.c: 65:             _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"69
-[; ;main.c: 69:         }
-}
-[e $U 340  ]
-"70
-[; ;main.c: 70:         else{
-[e :U 339 ]
-{
-"71
-[; ;main.c: 71:             _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"72
-[; ;main.c: 72:         }
-}
-[e :U 340 ]
-[e :U 338 ]
-[e :U 336 ]
-"74
-[; ;main.c: 74:     }
-}
-[e :U 332 ]
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 30 `i 332  ]
 [e $U 333  ]
-[e :U 334 ]
+[e :U 332 ]
+{
+"54
+[; ;main.c: 54:         read_Temp();
+[e ( _read_Temp ..  ]
+"55
+[; ;main.c: 55:         read_I();
+[e ( _read_I ..  ]
+"56
+[; ;main.c: 56:         read_U();
+[e ( _read_U ..  ]
+"57
+[; ;main.c: 57:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 30 `i 332  ]
+[e :U 333 ]
+}
+"60
+[; ;main.c: 60:     while(1){
+[e :U 336 ]
+{
+"62
+[; ;main.c: 62:         temperature = (float)((read_Temp() * 0.01953)/0.01) - 273.5;
+[e = _temperature -> - -> -> / * -> -> ( _read_Temp ..  `i `d .0.01953 .0.01 `f `d .273.5 `f ]
+"64
+[; ;main.c: 64:         current = ((read_I() * 0.01953)/11)/0.11;
+[e = _current -> / / * -> -> ( _read_I ..  `i `d .0.01953 -> -> 11 `i `d .0.11 `f ]
+"66
+[; ;main.c: 66:         voltage = (read_U() *0.01953)/0.25;
+[e = _voltage -> / * -> -> ( _read_U ..  `i `d .0.01953 .0.25 `f ]
+"68
+[; ;main.c: 68:         Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"69
+[; ;main.c: 69:         sprintf(temp, "%2.1f",voltage);
+[e ( _sprintf (1 , (. , &U _temp :s 1C -> _voltage `d ]
+"70
+[; ;main.c: 70:         Lcd_Write_String(temp);
+[e ( _Lcd_Write_String (1 &U _temp ]
+"72
+[; ;main.c: 72:         Lcd_Write_String(" V");
+[e ( _Lcd_Write_String (1 :s 2C ]
+"74
+[; ;main.c: 74:         Lcd_Set_Cursor(1,12);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 12 `i `uc ]
+"75
+[; ;main.c: 75:         sprintf(temp, "%2.1f",current);
+[e ( _sprintf (1 , (. , &U _temp :s 3C -> _current `d ]
 "76
-[; ;main.c: 76: }
+[; ;main.c: 76:         Lcd_Write_String(temp);
+[e ( _Lcd_Write_String (1 &U _temp ]
+"78
+[; ;main.c: 78:         Lcd_Write_String(" A");
+[e ( _Lcd_Write_String (1 :s 4C ]
+"80
+[; ;main.c: 80:         Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"81
+[; ;main.c: 81:         sprintf(temp, "%2.1f",temperature);
+[e ( _sprintf (1 , (. , &U _temp :s 5C -> _temperature `d ]
+"82
+[; ;main.c: 82:         Lcd_Write_String(temp);
+[e ( _Lcd_Write_String (1 &U _temp ]
+"84
+[; ;main.c: 84:         Lcd_Write_String(" C");
+[e ( _Lcd_Write_String (1 :s 6C ]
+"89
+[; ;main.c: 89:         _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"90
+[; ;main.c: 90:         if(PORTAbits.RA0 == 1){
+[e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 338  ]
+{
+"91
+[; ;main.c: 91:             CCPR2L = 55;
+[e = _CCPR2L -> -> 55 `i `uc ]
+"92
+[; ;main.c: 92:         }
+}
+[e $U 339  ]
+"93
+[; ;main.c: 93:         else if(PORTAbits.RA1 == 1){
+[e :U 338 ]
+[e $ ! == -> . . _PORTAbits 0 1 `i -> 1 `i 340  ]
+{
+"94
+[; ;main.c: 94:               CCPR2L--;
+[e -- _CCPR2L -> -> 1 `i `Vuc ]
+"95
+[; ;main.c: 95:             _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"96
+[; ;main.c: 96:         }
+}
+[e $U 341  ]
+"97
+[; ;main.c: 97:         else if(PORTAbits.RA2 == 1){
+[e :U 340 ]
+[e $ ! == -> . . _PORTAbits 0 2 `i -> 1 `i 342  ]
+{
+"98
+[; ;main.c: 98:             CCPR2L++;
+[e ++ _CCPR2L -> -> 1 `i `Vuc ]
+"99
+[; ;main.c: 99:             _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"102
+[; ;main.c: 102:         }
+}
+[e $U 343  ]
+"103
+[; ;main.c: 103:         else{
+[e :U 342 ]
+{
+"104
+[; ;main.c: 104:             _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"105
+[; ;main.c: 105:         }
+}
+[e :U 343 ]
+[e :U 341 ]
+[e :U 339 ]
+"108
+[; ;main.c: 108:     }
+}
+[e :U 335 ]
+[e $U 336  ]
+[e :U 337 ]
+"110
+[; ;main.c: 110: }
 [e :UE 331 ]
 }
-"78
-[; ;main.c: 78: unsigned char read_Temp(void)
+"112
+[; ;main.c: 112: unsigned char read_Temp(void)
 [v _read_Temp `(uc ~T0 @X0 1 ef ]
-"79
-[; ;main.c: 79: {
+"113
+[; ;main.c: 113: {
 {
 [e :U _read_Temp ]
 [f ]
-"80
-[; ;main.c: 80:     ADCON0=0b00001101;
+"114
+[; ;main.c: 114:     ADCON0=0b00001101;
 [e = _ADCON0 -> -> 13 `i `uc ]
-"81
-[; ;main.c: 81:     _delay((unsigned long)((100)*(8000000/4000000.0)));
+"115
+[; ;main.c: 115:     _delay((unsigned long)((100)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"82
-[; ;main.c: 82:     ADCON0bits.GO=1;
+"116
+[; ;main.c: 116:     ADCON0bits.GO=1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"83
-[; ;main.c: 83:     while(ADCON0bits.GO==1){};
-[e $U 342  ]
-[e :U 343 ]
+"117
+[; ;main.c: 117:     while(ADCON0bits.GO==1){};
+[e $U 345  ]
+[e :U 346 ]
 {
 }
-[e :U 342 ]
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 343  ]
-[e :U 344 ]
-"84
-[; ;main.c: 84:     return ADRESH;
-[e ) _ADRESH ]
-[e $UE 341  ]
-"85
-[; ;main.c: 85: }
-[e :UE 341 ]
+[e :U 345 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 346  ]
+[e :U 347 ]
+"118
+[; ;main.c: 118:     esantion_curent_t=ADRESH;
+[e = _esantion_curent_t -> _ADRESH `ui ]
+"119
+[; ;main.c: 119:     esantioane_t[0]=(esantion_curent_t+esantioane_t[1]+esantioane_t[2]+esantioane_t[3])/4;
+[e = *U + &U _esantioane_t * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux / + + + _esantion_curent_t *U + &U _esantioane_t * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux *U + &U _esantioane_t * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux *U + &U _esantioane_t * -> -> -> 3 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux -> -> 4 `i `ui ]
+"120
+[; ;main.c: 120:     esantioane_t[3]=esantioane_t[2];
+[e = *U + &U _esantioane_t * -> -> -> 3 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux *U + &U _esantioane_t * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux ]
+"121
+[; ;main.c: 121:     esantioane_t[2]=esantioane_t[1];
+[e = *U + &U _esantioane_t * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux *U + &U _esantioane_t * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux ]
+"122
+[; ;main.c: 122:     esantioane_t[1]=esantioane_t[0];
+[e = *U + &U _esantioane_t * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux *U + &U _esantioane_t * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux ]
+"124
+[; ;main.c: 124:     return esantioane_t[0];
+[e ) -> *U + &U _esantioane_t * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_t `ui `ux `uc ]
+[e $UE 344  ]
+"125
+[; ;main.c: 125: }
+[e :UE 344 ]
 }
-"87
-[; ;main.c: 87: unsigned char read_U(void)
+"127
+[; ;main.c: 127: unsigned char read_U(void)
 [v _read_U `(uc ~T0 @X0 1 ef ]
-"88
-[; ;main.c: 88: {
+"128
+[; ;main.c: 128: {
 {
 [e :U _read_U ]
 [f ]
-"89
-[; ;main.c: 89:     ADCON0=0b00011001;
+"129
+[; ;main.c: 129:     ADCON0=0b00011001;
 [e = _ADCON0 -> -> 25 `i `uc ]
-"90
-[; ;main.c: 90:     _delay((unsigned long)((100)*(8000000/4000000.0)));
+"130
+[; ;main.c: 130:     _delay((unsigned long)((100)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"91
-[; ;main.c: 91:     ADCON0bits.GO=1;
+"131
+[; ;main.c: 131:     ADCON0bits.GO=1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"92
-[; ;main.c: 92:     while(ADCON0bits.GO==1){};
-[e $U 346  ]
-[e :U 347 ]
+"132
+[; ;main.c: 132:     while(ADCON0bits.GO==1){};
+[e $U 349  ]
+[e :U 350 ]
 {
 }
-[e :U 346 ]
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 347  ]
-[e :U 348 ]
-"93
-[; ;main.c: 93:     return ADRESH;
-[e ) _ADRESH ]
-[e $UE 345  ]
-"94
-[; ;main.c: 94: }
-[e :UE 345 ]
+[e :U 349 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 350  ]
+[e :U 351 ]
+"133
+[; ;main.c: 133:     esantion_curent_u=ADRESH;
+[e = _esantion_curent_u -> _ADRESH `ui ]
+"134
+[; ;main.c: 134:     esantioane_u[0]=(esantion_curent_u+esantioane_u[1]+esantioane_u[2]+esantioane_u[3])/4;
+[e = *U + &U _esantioane_u * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux / + + + _esantion_curent_u *U + &U _esantioane_u * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux *U + &U _esantioane_u * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux *U + &U _esantioane_u * -> -> -> 3 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux -> -> 4 `i `ui ]
+"135
+[; ;main.c: 135:     esantioane_u[3]=esantioane_u[2];
+[e = *U + &U _esantioane_u * -> -> -> 3 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux *U + &U _esantioane_u * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux ]
+"136
+[; ;main.c: 136:     esantioane_u[2]=esantioane_u[1];
+[e = *U + &U _esantioane_u * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux *U + &U _esantioane_u * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux ]
+"137
+[; ;main.c: 137:     esantioane_u[1]=esantioane_u[0];
+[e = *U + &U _esantioane_u * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux *U + &U _esantioane_u * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux ]
+"139
+[; ;main.c: 139:     return esantioane_u[0];
+[e ) -> *U + &U _esantioane_u * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_u `ui `ux `uc ]
+[e $UE 348  ]
+"140
+[; ;main.c: 140: }
+[e :UE 348 ]
 }
-"96
-[; ;main.c: 96: unsigned char read_I(void)
+"142
+[; ;main.c: 142: unsigned char read_I(void)
 [v _read_I `(uc ~T0 @X0 1 ef ]
-"97
-[; ;main.c: 97: {
+"143
+[; ;main.c: 143: {
 {
 [e :U _read_I ]
 [f ]
-"98
-[; ;main.c: 98:     ADCON0=0b00011101;
+"144
+[; ;main.c: 144:     ADCON0=0b00011101;
 [e = _ADCON0 -> -> 29 `i `uc ]
-"99
-[; ;main.c: 99:     _delay((unsigned long)((100)*(8000000/4000000.0)));
+"145
+[; ;main.c: 145:     _delay((unsigned long)((100)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"100
-[; ;main.c: 100:     ADCON0bits.GO=1;
+"146
+[; ;main.c: 146:     ADCON0bits.GO=1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"101
-[; ;main.c: 101:     while(ADCON0bits.GO==1){};
-[e $U 350  ]
-[e :U 351 ]
+"147
+[; ;main.c: 147:     while(ADCON0bits.GO==1){};
+[e $U 353  ]
+[e :U 354 ]
 {
 }
-[e :U 350 ]
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 351  ]
-[e :U 352 ]
-"102
-[; ;main.c: 102:     return ADRESH;
-[e ) _ADRESH ]
-[e $UE 349  ]
-"103
-[; ;main.c: 103: }
-[e :UE 349 ]
+[e :U 353 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 354  ]
+[e :U 355 ]
+"148
+[; ;main.c: 148:     esantion_curent_i=ADRESH;
+[e = _esantion_curent_i -> _ADRESH `ui ]
+"149
+[; ;main.c: 149:     esantioane_i[0]=(esantion_curent_i+esantioane_i[1]+esantioane_i[2]+esantioane_i[3])/4;
+[e = *U + &U _esantioane_i * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux / + + + _esantion_curent_i *U + &U _esantioane_i * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux *U + &U _esantioane_i * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux *U + &U _esantioane_i * -> -> -> 3 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux -> -> 4 `i `ui ]
+"150
+[; ;main.c: 150:     esantioane_i[3]=esantioane_i[2];
+[e = *U + &U _esantioane_i * -> -> -> 3 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux *U + &U _esantioane_i * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux ]
+"151
+[; ;main.c: 151:     esantioane_i[2]=esantioane_i[1];
+[e = *U + &U _esantioane_i * -> -> -> 2 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux *U + &U _esantioane_i * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux ]
+"152
+[; ;main.c: 152:     esantioane_i[1]=esantioane_i[0];
+[e = *U + &U _esantioane_i * -> -> -> 1 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux *U + &U _esantioane_i * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux ]
+"154
+[; ;main.c: 154:     return esantioane_i[0];
+[e ) -> *U + &U _esantioane_i * -> -> -> 0 `i `ui `ux -> -> # *U &U _esantioane_i `ui `ux `uc ]
+[e $UE 352  ]
+"155
+[; ;main.c: 155: }
+[e :UE 352 ]
 }
-[p f _sprintf 8388736 ]
-[a 2C 83 83 84 32 61 61 32 80 85 83 72 69 68 0 ]
-[a 3C 77 73 78 85 83 32 61 61 32 80 85 83 72 69 68 0 ]
-[a 4C 80 76 85 83 32 61 61 32 80 85 83 72 69 68 0 ]
-[a 1C 37 100 32 32 32 32 0 ]
+[p f _sprintf 8495104 ]
+[a 1C 37 50 46 49 102 0 ]
+[a 3C 37 50 46 49 102 0 ]
+[a 5C 37 50 46 49 102 0 ]
+[a 2C 32 86 0 ]
+[a 6C 32 67 0 ]
+[a 4C 32 65 0 ]
