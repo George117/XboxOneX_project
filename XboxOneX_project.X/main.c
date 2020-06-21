@@ -126,7 +126,7 @@ void main(void) {
             break;
         }
         
-         if(current>1){
+         if(current>1.5){
             PWM=0;
             Lcd_Clear();
             Lcd_Set_Cursor(1,1);

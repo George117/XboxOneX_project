@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\XboxOneX_project.X.production.sym \
   --cmf=dist/default/production\XboxOneX_project.X.production.cmf -z \
-  -Q16F1825 -oC:\Users\georg\AppData\Local\Temp\s8fo.3 \
+  -Q16F1825 -oC:\Users\georg\AppData\Local\Temp\s8rg.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/XboxOneX_project.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=02190h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
@@ -33,7 +33,7 @@ Linker command line:
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\georg\AppData\Local\Temp\s8fo.o \
+  C:\Users\georg\AppData\Local\Temp\s8rg.o \
   dist/default/production\XboxOneX_project.X.production.o 
 
 Object code version is 3.11
@@ -43,7 +43,7 @@ Machine type is 16F1825
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\georg\AppData\Local\Temp\s8fo.o
+C:\Users\georg\AppData\Local\Temp\s8rg.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0

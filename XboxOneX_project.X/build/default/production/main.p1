@@ -858,8 +858,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 347 ]
 "129
-[; ;main.c: 129:          if(current>1){
-[e $ ! > _current -> -> 1 `i `f 348  ]
+[; ;main.c: 129:          if(current>1.5){
+[e $ ! > -> _current `d .1.5 348  ]
 {
 "130
 [; ;main.c: 130:             CCPR2L=0;
